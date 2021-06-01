@@ -1,0 +1,46 @@
+{
+  "name": "react-native-restyle-components",
+  "version": "0.1.1",
+  "private": false,
+  "description": "Easy use restyle components",
+  "types": "lib/index.d.ts",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/esm/index.js",
+  "author": {
+    "email": "onlyappasaheb4@gmail.com",
+    "name": "Lakade Appasaheb",
+    "url": "http://github.com/appasaheb4"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.json & tsc -p tsconfig-cjs.json"
+  },
+  "files": [
+    "lib/"
+  ],
+  "peerDependencies": {
+    "react": "*",
+    "react-native":"*"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "components",
+    "restyle-components",
+    "tech-abl"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appasaheb4/react-native-restyle-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/appasaheb4/react-native-restyle-components/issues"
+  },
+  "homepage": "https://github.com/appasaheb4/react-native-restyle-components#readme"
+}

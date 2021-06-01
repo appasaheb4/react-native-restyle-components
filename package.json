@@ -10,10 +10,10 @@
     "email": "onlyappasaheb4@gmail.com",
     "name": "Lakade Appasaheb",
     "url": "http://github.com/appasaheb4"
-  },   
+  },
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p tsconfig.json & tsc -p tsconfig-cjs.json"
+    "build": "tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json"
   },
   "files": [
     "lib/"

@@ -12,7 +12,7 @@ yarn add react-native-restyle-components
 ## Usage
 
 ```jsx
-import * as LibraryComponents from 'react-autocomplet-groupby';
+import * as LibraryComponents from 'react-native-restyle-components';
 
 ```
 ### Outputs

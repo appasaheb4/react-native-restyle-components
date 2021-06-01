@@ -17,4 +17,4 @@ import * as LibraryComponents from 'react-autocomplet-groupby';
 ```
 ### Outputs
 
-### More inforamtion watch youtube channel: https://www.youtube.com/channel/UCvD-7h7G0IYWRC42jAjSHXQ
+### More inforamtion watch youtube channel: https://www.youtube.com/tech-abl

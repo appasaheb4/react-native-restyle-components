@@ -1,6 +1,6 @@
 {
   "name": "react-native-restyle-components",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "private": false,
   "description": "Easy use restyle components",
   "types": "lib/index.d.ts",
@@ -50,10 +50,5 @@
   "bugs": {
     "url": "https://github.com/appasaheb4/react-native-restyle-components/issues"
   },
-  "homepage": "https://github.com/appasaheb4/react-native-restyle-components#readme",
-  "dependencies": {
-    "react": "^17.0.1",
-    "react-native": "^0.64.2",
-    "react-native-vector-icons": "^8.1.0"
-  }
+  "homepage": "https://github.com/appasaheb4/react-native-restyle-components#readme"
 }

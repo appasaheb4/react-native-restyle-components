@@ -11,15 +11,12 @@ yarn add react-native-restyle-components
 ```
 
 ## Usage
-
+    
 ```jsx
 import * as LibraryComponents from 'react-native-restyle-components';
 
 1.Otp Verify
-<LibraryComponents.Molecules.OtpVerify
-              onVerify={(otp) => {
-								console.log(otp);
-							}}/>
+<LibraryComponents.Molecules.OtpVerify onVerify={(otp) => {console.log(otp)}}/>
 
 // 1.Icons
 

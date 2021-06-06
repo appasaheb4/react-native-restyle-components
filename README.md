@@ -15,23 +15,29 @@ yarn add react-native-restyle-components
 ```jsx
 import * as LibraryComponents from 'react-native-restyle-components';
 
-1.Icons
+1.Otp Verify
+<LibraryComponents.Molecules.OtpVerify
+              onVerify={(otp) => {
+								console.log(otp);
+							}}/>
 
-Note: Please add fonts native side like
-package.json
- "rnpm": {
-    "assets": [
-      "./src/library/assets/fonts"
-    ]
-  }
-react-native-config.js
-module.exports = {
-	assets: ["./src/library/assets/fonts"],
-};
-react-native link
+// 1.Icons
 
-    I.LineAwesome
-    <LibraryComponents.Atoms.Icons.LineAwesome icon="home" size={24} color="black"/>
+// Note: Please add fonts native side like
+// package.json
+//  "rnpm": {
+//     "assets": [
+//       "./src/library/assets/fonts"
+//     ]
+//   }
+// react-native-config.js
+// module.exports = {
+// 	assets: ["./src/library/assets/fonts"],
+// };
+// react-native link
+
+//     I.LineAwesome
+//     <LibraryComponents.Atoms.Icons.LineAwesome icon="home" size={24} color="black"/>
 
 ```
 

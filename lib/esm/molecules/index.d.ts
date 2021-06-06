@@ -1,1 +1,2 @@
-export * from './OtpVerify';
+import OtpVerify from './OtpVerify';
+export { OtpVerify };

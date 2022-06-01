@@ -1,6 +1,6 @@
 {
   "name": "react-native-restyle-components",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "private": false,
   "description": "Easy use restyle components",
   "types": "lib/index.d.ts",
@@ -12,7 +12,7 @@
     "url": "http://github.com/appasaheb4"
   },
   "license": "MIT",
-  "scripts": {   
+  "scripts": {
     "build": "tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json"
   },
   "files": [

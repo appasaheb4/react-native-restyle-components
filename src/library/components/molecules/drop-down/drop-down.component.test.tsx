@@ -1,11 +1,11 @@
 import React from 'react';
-import {render} from '@core-utils';
-import {XB_Dropdown} from './drop-down.component';
+import {render} from '@testing-library/react-native';
+import {Dropdown} from './drop-down.component';
 
-describe('XB_Dropdown', () => {
+describe('Dropdown', () => {
   it('should render error hero card correctly', () => {
     const dropdown = render(
-      <XB_Dropdown label="Product Type" data={[]} onSelect={() => jest.fn()} />
+      <Dropdown label="Product Type" data={[]} onSelect={() => jest.fn()} />,
     );
     expect(dropdown).toMatchSnapshot();
   });

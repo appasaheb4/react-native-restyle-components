@@ -1,6 +1,6 @@
 {
   "name": "react-native-restyle-components",
-  "version": "0.1.18",
+  "version": "0.1.19",
   "private": false,
   "description": "Easy use restyle components",
   "types": "lib/index.d.ts",
@@ -31,8 +31,10 @@
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/react-native": "^9.1.0",
     "@types/jest": "^26.0.23",
     "@types/react-native": "^0.67.3",
+    "@types/react-native-vector-icons": "^6.4.10",
     "@types/react-test-renderer": "^17.0.1",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",

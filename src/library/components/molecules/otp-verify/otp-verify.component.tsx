@@ -10,7 +10,7 @@ const HIGHT = 48;
 export const OtpVerify = ({onVerify}: OtpVerifyProps): JSX.Element => {
   const [otp, setOtp] = useState<Array<string>>([]);
   const [otpIndex, setOtpIndex] = useState<Array<number>>([]);
-  const otpTextInput = useRef<TextInput[] | null[]>([]);
+  const otpTextInput = useRef<TextInput[] | null[] | any>([]);
 
   useEffect(() => {
     otpTextInput.current[0].focus();
@@ -44,10 +44,12 @@ export const OtpVerify = ({onVerify}: OtpVerifyProps): JSX.Element => {
   return (
     <>
       <View
-        flexDirection="row"
-        justifyContent="space-between"
-        marginVertical="m"
-        width={Dimensions.get('screen').width - 160}>
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          marginVertical: 10,
+          width: Dimensions.get('screen').width - 160,
+        }}>
         {inputs.map((i: number, j: number) => (
           <TextInput
             key={j.toString()}
@@ -59,7 +61,6 @@ export const OtpVerify = ({onVerify}: OtpVerifyProps): JSX.Element => {
               textAlign: 'center',
               color: 'white',
               fontSize: 20,
-              fontFamily: 'Poppins Regular',
               textAlignVertical: 'top',
               paddingTop: Platform.OS === 'ios' ? 0 : 10,
               paddingBottom: 0,

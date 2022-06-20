@@ -18,10 +18,15 @@ interface Props {
   data: Array<{label: string; value: string; selected?: boolean}>;
   testID?: string;
   zIndex?: number;
-  unSelectedItemColor: string;
+  unSelectedItemColor?: string;
   selectedItemColor?: string;
   iconColor?: string;
   onSelect: (item: {label: string; value: string}) => void;
+}
+
+interface Item {
+  item: any;
+  index: number;
 }
 // eslint-disable-next-line react/display-name
 export const Dropdown = React.forwardRef(
@@ -38,7 +43,7 @@ export const Dropdown = React.forwardRef(
       iconColor = '#000000',
       onSelect,
     }: Props,
-    ref: Ref<any>
+    ref: Ref<any>,
   ) => {
     const [visible, setVisible] = useState(false);
     const DropdownButton = useRef<any>(null);
@@ -51,7 +56,7 @@ export const Dropdown = React.forwardRef(
         data.filter((item: any) => {
           item.selected = item[displayKey] == value ? true : false;
           return item;
-        })
+        }),
       );
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [data, value]);
@@ -73,7 +78,7 @@ export const Dropdown = React.forwardRef(
       setVisible(false);
     };
 
-    const renderItem = ({item, index}) => (
+    const renderItem = ({item, index}: Item) => (
       <TouchableOpacity
         style={{
           paddingHorizontal: 10,
@@ -83,8 +88,7 @@ export const Dropdown = React.forwardRef(
             : unSelectedItemColor,
           marginBottom: data.length !== index + 1 ? 4 : 0,
         }}
-        onPress={() => onItemPress(item)}
-      >
+        onPress={() => onItemPress(item)}>
         <Text>{item[displayKey]}</Text>
       </TouchableOpacity>
     );
@@ -103,8 +107,7 @@ export const Dropdown = React.forwardRef(
               shadowRadius: 1,
               backgroundColor: 'white',
               width: '100%',
-            }}
-          >
+            }}>
             <FlatList
               data={options}
               renderItem={renderItem}
@@ -120,13 +123,12 @@ export const Dropdown = React.forwardRef(
         style={{
           borderBottomWidth: 1,
           borderRadius: 5,
-          borderColor: 'gray',
+          borderColor: hasError ? 'red' : 'gray',
           padding: 5,
           height: INPUT_HEIGHT,
           zIndex: zIndex,
         }}
-        testID={testID}
-      >
+        testID={testID}>
         <TouchableOpacity
           ref={DropdownButton}
           onPress={toggleDropdown}
@@ -137,8 +139,7 @@ export const Dropdown = React.forwardRef(
             justifyContent: 'space-between',
             position: 'relative',
           }}
-          testID={`${testID}_CLICK`}
-        >
+          testID={`${testID}_CLICK`}>
           <Text>{value || label}</Text>
           {renderDropdown()}
           {visible ? (
@@ -149,5 +150,5 @@ export const Dropdown = React.forwardRef(
         </TouchableOpacity>
       </View>
     );
-  }
+  },
 );

@@ -27,7 +27,7 @@ https://appasaheb4.github.io/react-restyle-components
 <table>
   <tr>
     <td>
-      <img src="https://github.com/appasaheb4.png?s=100" width="100">
+      <img src="https://github.com/appasaheb4.png?s=100" width="200">
     </td>
     <td>
       Appasaheb Lakade<br />

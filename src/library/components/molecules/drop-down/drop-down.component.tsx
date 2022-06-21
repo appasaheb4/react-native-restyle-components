@@ -39,7 +39,7 @@ export const Dropdown = React.forwardRef(
       data,
       zIndex,
       unSelectedItemColor = '#ffffff',
-      selectedItemColor = '#000000',
+      selectedItemColor = '#F0EFEE',
       iconColor = '#000000',
       onSelect,
     }: Props,

@@ -16,7 +16,7 @@ yarn add react-native-restyle-components
 
 ## Output
 
-<img src="https://github.com/appasaheb4.png?s=100" width="100">
+<img src="https://github.com/appasaheb4/react-native-restyle-components/blob/master/src/library/assets/npmInfo/appScreen.png" width="100">
 
 ### 📚 Storybook coming soon
 

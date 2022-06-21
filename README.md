@@ -16,7 +16,7 @@ yarn add react-native-restyle-components
 
 ## Output
 
-<img src="https://github.com/appasaheb4/react-native-restyle-components/blob/master/src/library/assets/npmInfo/appScreen.png" width="100">
+<img src="https://github.com/appasaheb4/react-native-restyle-components/blob/master/src/library/assets/npmInfo/appScreen.png" width="200">
 
 ### 📚 Storybook coming soon
 
@@ -27,7 +27,7 @@ https://appasaheb4.github.io/react-restyle-components
 <table>
   <tr>
     <td>
-      <img src="https://github.com/appasaheb4.png?s=100" width="200">
+      <img src="https://github.com/appasaheb4.png?s=100" width="100">
     </td>
     <td>
       Appasaheb Lakade<br />

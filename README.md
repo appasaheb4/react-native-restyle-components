@@ -10,6 +10,14 @@ or
 yarn add react-native-restyle-components
 ```
 
+## How to use
+
+### check App.tsx file : <a href="https://github.com/appasaheb4/react-native-restyle-components/blob/master/App.tsx">App.tsx</a>
+
+## Output
+
+<img src="https://github.com/appasaheb4.png?s=100" width="100">
+
 ### 📚 Storybook coming soon
 
 https://appasaheb4.github.io/react-restyle-components

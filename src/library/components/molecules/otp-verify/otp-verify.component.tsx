@@ -47,6 +47,7 @@ export const OtpVerify = ({onVerify}: OtpVerifyProps): JSX.Element => {
         style={{
           flexDirection: 'row',
           justifyContent: 'space-between',
+          alignSelf: 'center',
           marginVertical: 10,
           width: Dimensions.get('screen').width - 160,
         }}>
@@ -57,7 +58,7 @@ export const OtpVerify = ({onVerify}: OtpVerifyProps): JSX.Element => {
               width: HIGHT,
               height: HIGHT,
               borderRadius: HIGHT / 2,
-              backgroundColor: otpIndex.length > j ? '#3F4957' : '#ffffff',
+              backgroundColor: otpIndex.length > j ? '#3F4957' : '#000000',
               textAlign: 'center',
               color: 'white',
               fontSize: 20,

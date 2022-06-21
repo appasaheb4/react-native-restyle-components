@@ -9,31 +9,34 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-import {OtpVerify} from './src/library/components';
+import {SafeAreaView, StatusBar, View} from 'react-native';
+import {OtpVerify, Dropdown} from './src/library/components';
 
 const App = () => {
   return (
     <SafeAreaView>
       <StatusBar barStyle={'light-content'} />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View
-          style={{flex: 1, backgroundColor: '#000000', alignItems: 'center'}}>
-          <OtpVerify
-            onVerify={otp => {
-              console.log({otp});
-            }}
-          />
-        </View>
-      </ScrollView>
+      <View style={{flex: 1}}>
+        <OtpVerify
+          onVerify={otp => {
+            console.log({otp});
+          }}
+        />
+        <View style={{marginTop: 40}} />
+        <Dropdown
+          label={'Product Type'}
+          onSelect={item => {
+            console.log({item});
+          }}
+          data={[
+            {label: 'tech abl', value: 'tech abl'},
+            {label: 'github.com/appasaheb4', value: 'github.com/appasaheb4'},
+          ]}
+          displayKey="label"
+          testID="PROD-TYPE"
+          zIndex={1}
+        />
+      </View>
     </SafeAreaView>
   );
 };

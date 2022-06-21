@@ -54,7 +54,9 @@ export const Dropdown = React.forwardRef(
     useEffect(() => {
       setOptions(
         data.filter((item: any) => {
-          item.selected = item[displayKey] == value ? true : false;
+          item.selected = item[displayKey] === value ? true : false;
+          console.log({item});
+
           return item;
         }),
       );

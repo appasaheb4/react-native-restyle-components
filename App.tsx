@@ -10,6 +10,7 @@
 
 import React from 'react';
 import {SafeAreaView, StatusBar, View} from 'react-native';
+// here you can use  'react-native-restyle-components' not './src/library/components'
 import {OtpVerify, Dropdown} from './src/library/components';
 
 const App = () => {

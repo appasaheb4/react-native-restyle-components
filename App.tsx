@@ -29,7 +29,7 @@ const App = () => {
       />
       <View style={{marginTop: 40}} />
       <Dropdown
-        // ref={productTypeRef}
+        ref={productTypeRef}
         label={'Product Type'}
         onSelect={item => {
           console.log({item});

@@ -1,3 +1,4 @@
+export * from '../assets';
 export * from './atoms/Icons';
 export * from './atoms/box.component';
 export * from './atoms/text.component';

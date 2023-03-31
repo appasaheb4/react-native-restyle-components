@@ -1,7 +1,10 @@
 import React, {useRef} from 'react';
 import {View, PanResponder} from 'react-native';
-// here you can use  'react-native-restyle-components' not './src/library/components'
-import {OtpVerify, Dropdown} from './src/library/components';
+import {
+  OtpVerify,
+  Dropdown,
+  StepperGradient,
+} from 'react-native-restyle-components';
 
 const App = () => {
   const productTypeRef = useRef<any>();
@@ -41,6 +44,12 @@ const App = () => {
         displayKey="label"
         testID="PROD-TYPE"
         zIndex={1}
+      />
+      <StepperGradient
+        active={1}
+        colors={['#0687B4', '#D92CC1']}
+        stepperSize={14}
+        content={['Your Cart', 'About You', 'Payment']}
       />
     </View>
   );

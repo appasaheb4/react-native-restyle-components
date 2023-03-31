@@ -16,7 +16,11 @@
     "sourceMap": true,
     "jsx": "react-native",
     "noImplicitAny": false,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*"],
   "exclude": ["lib"],

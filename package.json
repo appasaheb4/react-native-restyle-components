@@ -1,6 +1,6 @@
 {
   "name": "react-native-restyle-components",
-  "version": "0.1.23",
+  "version": "0.1.25",
   "private": false,
   "description": "Easy use restyle components",
   "types": "lib/index.d.ts",
@@ -23,8 +23,10 @@
     "lib/"
   ],
   "dependencies": {
+    "@shopify/restyle": "^2.4.2",
     "react": "17.0.2",
     "react-native": "0.68.2",
+    "react-native-linear-gradient": "^2.6.2",
     "react-native-vector-icons": "^9.1.0"
   },
   "devDependencies": {

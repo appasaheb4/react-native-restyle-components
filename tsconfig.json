@@ -1,0 +1,29 @@
+{
+  // "extends": "@tsconfig/react-native/tsconfig.json",
+  "compileOnSave": false,
+  "compilerOptions": {
+    "lib": ["ES2015"],
+    "target": "ES2015",
+    "module": "ES2020",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./lib/esm",
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node",
+    "sourceMap": true,
+    "jsx": "react-native",
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*"],
+  "exclude": ["lib"],
+  "typeRoots": ["../node_modules/@types/index.d.ts"]
+}

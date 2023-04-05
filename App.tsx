@@ -23,7 +23,7 @@ import {theme} from './src/theme';
 
 import {
   OtpVerify,
-  //Dropdown,
+  Dropdown,
   StepperGradient,
 } from './lib/cjs/library/components';
 
@@ -40,7 +40,7 @@ function App(): JSX.Element {
               console.log({otp});
             }}
           />
-          {/* <Dropdown
+          <Dropdown
             label={'Product Type'}
             onSelect={item => {
               console.log({item});
@@ -52,7 +52,7 @@ function App(): JSX.Element {
             displayKey="label"
             testID="PROD-TYPE"
             zIndex={1}
-          /> */}
+          />
           <StepperGradient
             active={1}
             colors={['#0687B4', '#D92CC1']}

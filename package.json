@@ -17,7 +17,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "npmPublish": "npm version patch && sudo npm publish"
+    "pub": "npm version patch && npm publish"
   },
   "files": [
     "lib/"

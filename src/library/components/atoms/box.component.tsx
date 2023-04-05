@@ -3,12 +3,10 @@ import React from 'react';
 import {View, Text} from 'react-native';
 // import {Theme} from '../../../theme';
 //export const Box = createBox<Theme>();
-const Box1 = () => {
+export const Box1 = (): JSX.Element => {
   return (
     <View>
       <Text>Hi</Text>
     </View>
   );
 };
-
-export default Box1;

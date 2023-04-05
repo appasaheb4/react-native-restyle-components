@@ -1,5 +1,4 @@
 {
-  // "extends": "@tsconfig/react-native/tsconfig.json",
   "compileOnSave": false,
   "compilerOptions": {
     "lib": ["ES2015"],

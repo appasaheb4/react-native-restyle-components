@@ -1,2 +1,3 @@
 /// <reference types="react" />
-export declare const Box1: () => JSX.Element;
+declare const Box1: () => JSX.Element;
+export default Box1;

@@ -76,6 +76,6 @@
   },
   "homepage": "https://github.com/appasaheb4/react-native-restyle-components#readme",
   "publishConfig": {
-    "onlyappasaheb4:registry": "https://www.npmjs.com/package/react-native-restyle-components"
+    "registry": "https://www.npmjs.com/package/react-native-restyle-components"
   }
 }

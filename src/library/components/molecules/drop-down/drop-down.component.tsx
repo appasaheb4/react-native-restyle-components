@@ -6,7 +6,8 @@ import React, {
   useImperativeHandle,
   Ref,
 } from 'react';
-import {Text, TouchableOpacity, FlatList, View} from 'react-native';
+import {TouchableOpacity, FlatList} from 'react-native';
+import {Box, Text} from '@/library/components';
 import Icon from 'react-native-vector-icons/Feather';
 
 const INPUT_HEIGHT = 48;
@@ -91,14 +92,14 @@ export const Dropdown = React.forwardRef(
           marginBottom: data.length !== index + 1 ? 4 : 0,
         }}
         onPress={() => onItemPress(item)}>
-        <Text>{item[displayKey]}</Text>
+        <Text variant="bodyText">{item[displayKey]}</Text>
       </TouchableOpacity>
     );
 
     const renderDropdown = () => {
       return (
         visible && (
-          <View
+          <Box
             style={{
               flex: 1,
               position: 'absolute',
@@ -115,21 +116,23 @@ export const Dropdown = React.forwardRef(
               renderItem={renderItem}
               keyExtractor={(item, index) => index.toString()}
             />
-          </View>
+          </Box>
         )
       );
     };
 
     return (
-      <View
-        style={{
-          borderBottomWidth: 1,
-          borderRadius: 5,
-          borderColor: hasError ? 'red' : 'gray',
-          padding: 5,
-          height: INPUT_HEIGHT,
-          zIndex: zIndex,
-        }}
+      <Box
+        flexDirection="row"
+        borderColor={hasError ? 'red' : 'gray'}
+        borderWidth={0.4}
+        borderRadius={5}
+        marginTop="xs"
+        marginBottom="xs"
+        alignItems="center"
+        justifyContent="center"
+        height={INPUT_HEIGHT}
+        zIndex={zIndex}
         testID={testID}>
         <TouchableOpacity
           ref={DropdownButton}
@@ -142,7 +145,9 @@ export const Dropdown = React.forwardRef(
             position: 'relative',
           }}
           testID={`${testID}_CLICK`}>
-          <Text>{value || label}</Text>
+          <Text variant="bodyText" marginHorizontal="ss">
+            {value || label}
+          </Text>
           {renderDropdown()}
           {visible ? (
             <Icon name="chevron-up" size={30} color={iconColor} />
@@ -150,7 +155,7 @@ export const Dropdown = React.forwardRef(
             <Icon name="chevron-down" size={30} color={iconColor} />
           )}
         </TouchableOpacity>
-      </View>
+      </Box>
     );
   },
 );

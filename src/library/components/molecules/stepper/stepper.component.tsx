@@ -1,9 +1,6 @@
-/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable import/prefer-default-export */
 import React from 'react';
-import {Text} from 'react-native';
-import {Box} from '../..';
-import LinearGradient from 'react-native-linear-gradient';
+import {View, Text} from 'react-native';
 
 interface StepperGradientProps {
   active: number;
@@ -21,27 +18,8 @@ export const StepperGradient = ({
   stepperSize = 10,
 }: StepperGradientProps) => {
   return (
-    <Box
-      flexDirection="row"
-      alignItems="center"
-      justifyContent="space-between"
-      marginVertical="md">
-      <LinearGradient
-        style={{
-          flex: 1,
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          height: height,
-          borderRadius: 5,
-          flexDirection: 'row',
-          paddingHorizontal: 30,
-        }}
-        start={{x: 0.0, y: 0.25}}
-        end={{x: 0.5, y: 1.0}}
-        locations={[0, 0.5, 0.6]}
-        colors={colors}>
-        <Text>HI hello</Text>
-      </LinearGradient>
-    </Box>
+    <View>
+      <Text>HI hello</Text>
+    </View>
   );
 };

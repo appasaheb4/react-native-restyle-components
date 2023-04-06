@@ -1,6 +1,6 @@
 {
   "name": "react-native-restyle-components",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "private": false,
   "description": "Easy use restyle components",
   "main": "lib/cjs/library/components/index.js",
@@ -18,14 +18,17 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
-  "files": ["src/", "lib/"],
-  "dependencies": {
-    "@shopify/restyle": "^2.4.2",
-    "react": "18.2.0",
-    "react-native": "0.71.6",
-    "react-native-gradle-plugin": "^0.71.17",
-    "react-native-linear-gradient": "^2.6.2",
-    "react-native-vector-icons": "^9.2.0"
+  "files": [
+    "src/",
+    "lib/"
+  ],
+  "peerDependencies": {
+    "@shopify/restyle": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-gradle-plugin": "*",
+    "react-native-linear-gradient": "*",
+    "react-native-vector-icons": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

@@ -21,11 +21,11 @@ import {theme} from './src/theme';
 
 //import {OtpVerify, Dropdown, StepperGradient} from './src/library/components';
 
-// import {
-//   OtpVerify,
-//   Dropdown,
-//   StepperGradient,
-// } from './lib/cjs/library/components';
+import {
+  OtpVerify,
+  Dropdown,
+  StepperGradient,
+} from './lib/cjs/library/components';
 
 function App(): JSX.Element {
   return (

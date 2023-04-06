@@ -1,6 +1,6 @@
 {
   "name": "react-native-restyle-components",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "private": false,
   "description": "Easy use restyle components",
   "types": "lib/cjs/library/components/index.d.ts",
@@ -11,7 +11,7 @@
     "url": "http://github.com/appasaheb4"
   },
   "scripts": {
-    "build": "rm -rf lib && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json && copyfiles -u 1 src/library/assets/**/* lib/cjs",
+    "build": "rm -rf lib && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json",
     "android": "react-native run-android --port=8082",
     "ios": "react-native run-ios --simulator=`iPhone 14 Pro`",
     "start": "react-native start",

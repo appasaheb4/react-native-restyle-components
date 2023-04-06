@@ -1,0 +1,13 @@
+
+# Dependency directory
+node_modules
+# Logs
+*.log
+npm-debug.log
+yarn.lock
+
+# Runtime data
+tmp
+  
+# Examples (If applicable to your project)
+examples

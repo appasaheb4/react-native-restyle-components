@@ -6,20 +6,11 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
 import {ThemeProvider} from '@shopify/restyle';
 import {theme} from './src/theme';
 
-//import {OtpVerify, Dropdown, StepperGradient} from './src/library/components';
+//import {OtpVerify, Dropdown, StepperGradient} from 'react-native-restyle-components'; // use like this
 
 import {
   OtpVerify,

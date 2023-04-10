@@ -10,6 +10,10 @@ or
 yarn add react-native-restyle-components
 ```
 
+## Please set @shopify/restyle theme before
+
+more: https://github.com/Shopify/restyle#readme
+
 ## How to use
 
 ### check App.tsx file : <a href="https://github.com/appasaheb4/react-native-restyle-components/blob/master/App.tsx">App.tsx</a>

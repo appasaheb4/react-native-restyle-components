@@ -10,7 +10,7 @@ or
 yarn add react-native-restyle-components
 ```
 
-## Please set @shopify/restyle theme before
+### Please set @shopify/restyle theme before
 
 more: https://github.com/Shopify/restyle#readme
 

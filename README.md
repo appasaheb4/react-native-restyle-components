@@ -12,7 +12,7 @@ yarn add react-native-restyle-components
 
 ### Please set @shopify/restyle theme before
 
-more: https://github.com/Shopify/restyle#readme
+more: https://github.com/Shopify/restyle#readme <br />
 theme folders check: https://github.com/appasaheb4/react-native-restyle-components/tree/master/src/theme
 
 ## How to use

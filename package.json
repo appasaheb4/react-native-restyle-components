@@ -1,6 +1,6 @@
 {
   "name": "react-native-restyle-components",
-  "version": "1.0.21",
+  "version": "1.0.26",
   "private": false,
   "description": "Easy use restyle components",
   "main": "lib/cjs/library/components/index.js",

@@ -37,7 +37,7 @@ Website: www.tech-abl.com
 
 ## Contributes / Support
 
-1.  More content here 😊 : https://www.youtube.com/tech-abl
+1.  More content here : https://www.youtube.com/@tech-abl
 
 2.  Submit your pr for idea / issue / feature
     ### How To Contribute

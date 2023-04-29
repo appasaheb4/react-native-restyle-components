@@ -29,9 +29,9 @@ theme folders check: https://github.com/appasaheb4/react-native-restyle-componen
 https://appasaheb4.github.io/react-restyle-components
 
 ☆━━━━━━━━━━━━━━━━━━━☆☆━━━━━━━━━━━━━━━━━━━☆
-Mobile No: +91 9260303151
-Email Id: onlyappasaheb4@gmail.com
-Github: www.github.com/appasaheb4
+Mobile No: +91 9260303151 <br />
+Email Id: onlyappasaheb4@gmail.com <br />
+Github: www.github.com/appasaheb4 <br />
 Website: www.tech-abl.com
 ☆━━━━━━━━━━━━━━━━━━━☆☆━━━━━━━━━━━━━━━━━━━☆
 

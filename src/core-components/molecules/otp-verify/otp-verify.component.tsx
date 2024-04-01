@@ -37,7 +37,6 @@ export const OtpVerify = ({onVerify}: OtpVerifyProps): JSX.Element => {
     }
     otp[index] = value;
     setOtp(otp);
-    console.log({len: otpIndex.length});
   };
 
   const inputs = Array(4).fill(0);
@@ -49,6 +48,7 @@ export const OtpVerify = ({onVerify}: OtpVerifyProps): JSX.Element => {
           justifyContent: 'space-between',
           alignSelf: 'center',
           marginVertical: 10,
+          backgroundColor: 'black',
           width: Dimensions.get('screen').width - 160,
         }}>
         {inputs?.map((i: number, j: number) => (

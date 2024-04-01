@@ -1,10 +1,10 @@
 {
   "name": "react-native-restyle-components",
-  "version": "1.0.17",
+  "version": "1.0.32",
   "private": false,
   "description": "Easy use restyle components",
-  "main": "lib/cjs/library/components/index.js",
-  "types": "lib/cjs/library/components/index.d.ts",
+  "main": "lib/cjs/core-components/index.js",
+  "types": "lib/cjs/core-components/index.d.ts",
   "author": {
     "email": "onlyappasaheb4@gmail.com",
     "name": "Lakade Appasaheb",

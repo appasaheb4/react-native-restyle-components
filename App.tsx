@@ -12,11 +12,7 @@ import {theme} from './src/theme';
 
 //import {OtpVerify, Dropdown, StepperGradient} from 'react-native-restyle-components'; // use like this
 
-import {
-  OtpVerify,
-  Dropdown,
-  StepperGradient,
-} from './lib/cjs/library/components';
+import {OtpVerify, Dropdown, StepperGradient} from './lib/cjs/core-components';
 
 function App(): JSX.Element {
   return (

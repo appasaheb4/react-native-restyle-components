@@ -1,4 +1,4 @@
-/// <reference types="react" />
+import React from 'react';
 interface StepperGradientProps {
     active: number;
     content: Array<string>;
@@ -6,5 +6,5 @@ interface StepperGradientProps {
     height?: number;
     stepperSize: number;
 }
-export declare const StepperGradient: ({ active, content, colors, height, stepperSize, }: StepperGradientProps) => JSX.Element;
+export declare const StepperGradient: ({ active, content, colors, height, stepperSize, }: StepperGradientProps) => React.JSX.Element;
 export {};

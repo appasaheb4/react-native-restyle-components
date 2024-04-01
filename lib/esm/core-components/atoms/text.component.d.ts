@@ -9,6 +9,6 @@ declare type BaseTextProps = ColorProps<Theme> & OpacityProps<Theme> & VisiblePr
     children?: React.ReactNode;
 };
 declare type TextProps = RestyleProps<'textVariants'> & RNTextProps;
-export declare function Text({ children, variant, ...rest }: TextProps): JSX.Element;
+export declare function Text({ children, variant, ...rest }: TextProps): React.JSX.Element;
 export declare const TextRN: ({ testID, style, children, }: BaseTextProps) => JSX.Element;
 export {};

@@ -7,7 +7,7 @@ interface IconProps {
   color?: string;
 }
 
-const glyphMapLineawesome = require('../../assets/glyphmaps/LineAwesome.json');
+const glyphMapLineawesome = require('../../library/assets/glyphmaps/LineAwesome.json');
 export const LineAwesomeIconSet = createIconSet(
   glyphMapLineawesome,
   'lineawesome',

@@ -1,6 +1,6 @@
 {
   "name": "react-native-restyle-components",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "private": false,
   "description": "Easy use restyle components",
   "main": "lib/cjs/core-components/index.js",
@@ -18,7 +18,10 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
-  "files": ["src/", "lib/"],
+  "files": [
+    "src/",
+    "lib/"
+  ],
   "peerDependencies": {
     "@shopify/restyle": "*",
     "react": "*",

@@ -10,19 +10,16 @@ or
 yarn add react-native-restyle-components
 ```
 
-### Please configuration @shopify/restyle theme before
+<!-- ### Please configuration @shopify/restyle theme before
 
 How to configuration: https://www.youtube.com/watch?v=jN_cgBZI2Lg <br />
 more: https://github.com/Shopify/restyle#readme <br />
-theme folders check: https://github.com/appasaheb4/react-native-restyle-components/tree/master/src/theme
+theme folders check: https://github.com/appasaheb4/react-native-restyle-components/tree/master/src/theme -->
 
-## How to use
-
-### check App.tsx file : <a href="https://github.com/appasaheb4/react-native-restyle-components/blob/master/App.tsx">App.tsx</a>
-
-## Output
-
-<img src="https://github.com/appasaheb4/react-native-restyle-components/blob/master/src/library/assets/npmInfo/appScreen.png" width="200">
+<!-- ## How to use
+### check App.tsx file : <a href="https://github.com/appasaheb4/react-native-restyle-components/blob/master/App.tsx">App.tsx</a> -->
+<!-- ## Output
+<img src="https://github.com/appasaheb4/react-native-restyle-components/blob/master/src/library/assets/npmInfo/appScreen.png" width="200"> -->
 
 ### 📚 Storybook coming soon
 

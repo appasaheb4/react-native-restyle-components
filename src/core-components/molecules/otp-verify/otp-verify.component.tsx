@@ -48,7 +48,6 @@ export const OtpVerify = ({onVerify}: OtpVerifyProps): JSX.Element => {
           justifyContent: 'space-between',
           alignSelf: 'center',
           marginVertical: 10,
-          backgroundColor: 'black',
           width: Dimensions.get('screen').width - 160,
         }}>
         {inputs?.map((i: number, j: number) => (

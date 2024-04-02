@@ -21,6 +21,12 @@ theme folders check: https://github.com/appasaheb4/react-native-restyle-componen
 <!-- ## Output
 <img src="https://github.com/appasaheb4/react-native-restyle-components/blob/master/src/library/assets/npmInfo/appScreen.png" width="200"> -->
 
+## How to use restyle components
+
+import {OtpVerify, Dropdown, StepperGradient} from 'react-native-restyle-components';
+
+Much more components available in storybook 🙂
+
 ### 📚 Storybook coming soon
 
 https://appasaheb4.github.io/react-restyle-components

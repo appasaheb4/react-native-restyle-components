@@ -25,9 +25,36 @@ theme folders check: https://github.com/appasaheb4/react-native-restyle-componen
 
 import {OtpVerify, Dropdown, StepperGradient} from 'react-native-restyle-components';
 
+```
+        <OtpVerify
+            onVerify={otp => {
+              console.log({otp});
+            }}
+          />
+        <Dropdown
+            label={'Product Type'}
+            onSelect={item => {
+              console.log({item});
+            }}
+            data={[
+              {label: 'tech abl', value: 'tech abl'},
+              {label: 'github.com/appasaheb4', value: 'github.com/appasaheb4'},
+            ]}
+            displayKey="label"
+            testID="PROD-TYPE"
+            zIndex={1}
+          />
+        <StepperGradient
+            active={1}
+            colors={['#0687B4', '#D92CC1']}
+            stepperSize={14}
+            content={['Your Cart', 'About You', 'Payment']}
+          />
+```
+
 Much more components available in storybook 🙂
 
-### 📚 Storybook coming soon
+### 📚 Like this storybook coming soon for React-Native
 
 https://appasaheb4.github.io/react-restyle-components
 
@@ -42,7 +69,7 @@ Website: www.tech-abl.com
 
 ## Contributes / Support
 
-1.  More content here : https://www.youtube.com/@techabl
+1.  More content: https://www.youtube.com/@techabl
 2.  Submit your pr for idea / issue / feature
     ### How To Contribute
         - Fork and clone this repository

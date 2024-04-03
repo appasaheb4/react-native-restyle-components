@@ -9,6 +9,7 @@ import {
   Dropdown,
   StepperGradient,
   Button,
+  CheckBox,
 } from './lib/cjs/core-components';
 
 function App(): JSX.Element {
@@ -46,11 +47,25 @@ function App(): JSX.Element {
           />
           <Button title="Cancel" onPress={() => {}} />
           <Button
-            buttonStyle={{backgroundColor: theme1.colors.primary}}
+            buttonStyle={{
+              backgroundColor: theme1.colors.primary,
+              marginTop: 10,
+              marginBottom: 10,
+            }}
             titleStyle={{color: theme1.colors.white}}
             isDisabled={true}
             title="Save"
             onPress={() => {}}
+          />
+          <CheckBox
+            title="Services"
+            list={[
+              {title: 'Web', selected: true},
+              {title: 'Mobile', selected: false},
+            ]}
+            onChange={item => {
+              console.log({item});
+            }}
           />
         </ThemeProvider>
       </ScrollView>

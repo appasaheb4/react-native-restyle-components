@@ -5,7 +5,7 @@ import {
   TouchableOpacityProps,
 } from 'react-native';
 import React from 'react';
-import {useTheme} from '@/theme1';
+import {useTheme} from '../../../theme1';
 import styleSheet from './styles';
 
 interface ButtonProps {

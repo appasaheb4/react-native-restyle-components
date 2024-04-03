@@ -1,5 +1,5 @@
 import {CreateResponsiveStyle} from 'rn-responsive-styles';
-import {ThemeProps} from '@/theme1';
+import {ThemeProps} from '../../../theme1';
 
 export default ({colors}: ThemeProps) => {
   return CreateResponsiveStyle({

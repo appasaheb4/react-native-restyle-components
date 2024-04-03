@@ -1,4 +1,4 @@
-import { ThemeProps } from '@/theme1';
+import { ThemeProps } from '../../../theme1';
 declare const _default: ({ colors }: ThemeProps) => {
     buttonStyle: {
         padding: number;

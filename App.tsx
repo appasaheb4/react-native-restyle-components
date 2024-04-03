@@ -1,20 +1,18 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
 import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
 import {ThemeProvider} from '@shopify/restyle';
 import {theme} from './src/theme';
-
+import {useTheme} from './src/theme1';
 //import {OtpVerify, Dropdown, StepperGradient} from 'react-native-restyle-components'; // use like this
-
-import {OtpVerify, Dropdown, StepperGradient} from './lib/cjs/core-components';
+import {
+  OtpVerify,
+  Dropdown,
+  StepperGradient,
+  Button,
+} from './lib/cjs/core-components';
 
 function App(): JSX.Element {
+  const theme1 = useTheme();
   return (
     <SafeAreaView>
       <StatusBar barStyle={'light-content'} />
@@ -45,6 +43,14 @@ function App(): JSX.Element {
             colors={['#0687B4', '#D92CC1']}
             stepperSize={14}
             content={['Your Cart', 'About You', 'Payment']}
+          />
+          <Button title="Cancel" onPress={() => {}} />
+          <Button
+            buttonStyle={{backgroundColor: theme1.colors.primary}}
+            titleStyle={{color: theme1.colors.white}}
+            isDisabled={true}
+            title="Save"
+            onPress={() => {}}
           />
         </ThemeProvider>
       </ScrollView>

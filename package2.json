@@ -24,6 +24,8 @@
     "dayjs": "^1.11.10",
     "react-native-gradle-plugin": "^0.71.17",
     "react-native-linear-gradient": "^2.6.2",
+    "react-native-svg": "^15.1.0",
+    "react-native-svg-transformer": "^1.3.0",
     "react-native-vector-icons": "^9.2.0",
     "rn-responsive-styles": "^2.2.0"
   },
@@ -33,6 +35,8 @@
     "dayjs": "*",
     "react-native-gradle-plugin": "*",
     "react-native-linear-gradient": "*",
+    "react-native-svg": "*",
+    "react-native-svg-transformer": "*",
     "react-native-vector-icons": "*",
     "rn-responsive-styles": "*"
   },
@@ -41,6 +45,7 @@
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
     "@react-native-community/eslint-config": "^3.2.0",
+    "@react-native/metro-config": "^0.75.0-main",
     "@tsconfig/react-native": "^2.0.2",
     "@types/jest": "^29.2.1",
     "@types/react": "^18.0.24",

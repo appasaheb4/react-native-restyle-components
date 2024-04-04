@@ -22,7 +22,12 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*",
+    "type/declarations.d.ts"
+  ],
   "exclude": ["lib"],
   "typeRoots": ["../node_modules/@types/index.d.ts"]
 }

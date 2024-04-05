@@ -61,8 +61,6 @@ https://appasaheb4.github.io/react-restyle-components
 ### 🌎📧 Contact Details
 
 ☆━━━━━━━━━━━━━━━━━━━☆☆━━━━━━━━━━━━━━━━━━━☆
-Mobile No: +91 9260303151 <br />
-Email Id: onlyappasaheb4@gmail.com <br />
 Github: www.github.com/appasaheb4 <br />
 Website: www.tech-abl.com
 ☆━━━━━━━━━━━━━━━━━━━☆☆━━━━━━━━━━━━━━━━━━━☆

@@ -74,6 +74,7 @@ export const DropDownPriorityList = ({
                   onPress={() => {
                     onChange(item);
                     setValue(item);
+                    setIsOpen(!isOpen);
                   }}>
                   <View
                     style={[

@@ -59,6 +59,7 @@ export const DropDownList = ({
                   onPress={() => {
                     onChange(item[displayKey]);
                     setValue(item.title);
+                    setIsOpen(!isOpen);
                   }}>
                   <Text style={{marginLeft: 2}}>{item[displayKey]}</Text>
                 </TouchableOpacity>

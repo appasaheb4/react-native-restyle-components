@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
 import {ThemeProvider} from '@shopify/restyle';
 import {theme} from './src/theme';
@@ -10,10 +10,40 @@ import {
   StepperGradient,
   Button,
   CheckBox,
+  DropDownCheckBoxParentChild,
 } from './lib/cjs/core-components';
 
 function App(): JSX.Element {
   const theme1 = useTheme();
+  const [businessList, setBusinessList] = useState([
+    [
+      {
+        'Parent Category 1': [
+          {title: 'Sub-Category 1', selected: false},
+          {title: 'Sub-Category 2', selected: false},
+        ],
+        selected: false,
+      },
+    ],
+    [
+      {
+        'Parent Category 2': [
+          {title: 'Sub-Category 1', selected: false},
+          {title: 'Sub-Category 2', selected: false},
+        ],
+        selected: false,
+      },
+    ],
+    [
+      {
+        'Parent Category 3': [
+          {title: 'Sub-Category 1', selected: false},
+          {title: 'Sub-Category 2', selected: false},
+        ],
+        selected: false,
+      },
+    ],
+  ]);
   return (
     <SafeAreaView>
       <StatusBar barStyle={'light-content'} />
@@ -66,6 +96,11 @@ function App(): JSX.Element {
             onChange={item => {
               console.log({item});
             }}
+          />
+          <DropDownCheckBoxParentChild
+            title="Business Unit *"
+            list={businessList}
+            onChange={item => {}}
           />
         </ThemeProvider>
       </ScrollView>

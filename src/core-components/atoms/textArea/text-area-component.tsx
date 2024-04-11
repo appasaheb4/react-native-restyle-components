@@ -7,12 +7,14 @@ import styleSheet from './style';
 export interface TextAreaProps {
   title?: string;
   placeholder?: string;
+  placeholderTextColor?: string;
   onChangeText: (value: string) => void;
 }
 
 export const TextArea = ({
   title = '',
   placeholder = '',
+  placeholderTextColor = 'grey',
   onChangeText,
 }: TextAreaProps) => {
   const theme = useTheme();
@@ -27,7 +29,7 @@ export const TextArea = ({
           placeholder={placeholder}
           style={styles.textArea}
           underlineColorAndroid="transparent"
-          placeholderTextColor="grey"
+          placeholderTextColor={placeholderTextColor}
           numberOfLines={10}
           multiline={true}
           onChangeText={(value: any) => {

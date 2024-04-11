@@ -3,8 +3,8 @@ import React, {useEffect, useState} from 'react';
 import _ from 'lodash';
 import {useTheme} from '../../../theme1';
 import styleSheet from './style';
-import Icon from 'react-native-vector-icons/Feather';
-// import {ArrowBottom, ArrowTop} from '../../../library/assets/icons';
+// import Icon from 'react-native-vector-icons/Feather';
+import * as SVG from '../../../library/assets/icons';
 
 export interface DropDownCheckBoxParentChildProps {
   title?: string;
@@ -37,16 +37,16 @@ export const DropDownCheckBoxParentChild = ({
         }}>
         <View style={styles.optionView}>
           <Text>{value}</Text>
-          {/* {isOpen ? (
-            <ArrowTop color={theme.colors.gray6} />
-          ) : (
-            <ArrowBottom color={theme.colors.gray6} />
-          )} */}
           {isOpen ? (
+            <SVG.ArrowTop color={theme.colors.gray6} />
+          ) : (
+            <SVG.ArrowBottom color={theme.colors.gray6} />
+          )}
+          {/* {isOpen ? (
             <Icon name="chevron-up" size={30} color="#4A4A4A" />
           ) : (
             <Icon name="chevron-down" size={30} color="#4A4A4A" />
-          )}
+          )} */}
         </View>
       </TouchableOpacity>
       {isOpen && (

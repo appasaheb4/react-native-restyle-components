@@ -4,7 +4,7 @@ import _ from 'lodash';
 import {useTheme} from '../../../theme1';
 import styleSheet from './style';
 // import Icon from 'react-native-vector-icons/Feather';
-import * as SVG from '../../../library/assets/icons';
+import {ArrowBottom, ArrowTop} from '../../../library/assets/icons';
 
 export interface DropDownCheckBoxParentChildProps {
   title?: string;
@@ -38,9 +38,9 @@ export const DropDownCheckBoxParentChild = ({
         <View style={styles.optionView}>
           <Text>{value}</Text>
           {isOpen ? (
-            <SVG.ArrowTop color={theme.colors.gray6} />
+            <ArrowTop color={theme.colors.gray6} />
           ) : (
-            <SVG.ArrowBottom color={theme.colors.gray6} />
+            <ArrowBottom color={theme.colors.gray6} />
           )}
           {/* {isOpen ? (
             <Icon name="chevron-up" size={30} color="#4A4A4A" />

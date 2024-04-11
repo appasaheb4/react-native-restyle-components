@@ -41,6 +41,14 @@ export default ({colors, typography}: ThemeProps): any => {
       right: 0,
       left: 0,
       zIndex: 999,
+      shadowColor: colors.black,
+      shadowOffset: {
+        width: 5,
+        height: 5,
+      },
+      shadowOpacity: 0.26,
+      shadowRadius: 3,
+      elevation: 10,
     },
     flatListView: {
       borderRadius: 10,
@@ -50,9 +58,9 @@ export default ({colors, typography}: ThemeProps): any => {
         width: 0,
         height: 2,
       },
-      shadowOpacity: 0.25,
-      shadowRadius: 3.84,
-      elevation: 5,
+      shadowOpacity: 0.26,
+      shadowRadius: 3,
+      elevation: 10,
       padding: 20,
     },
   };

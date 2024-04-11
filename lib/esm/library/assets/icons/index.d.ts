@@ -1,5 +1,5 @@
-import ArrowBottomIcon from './ArrowBottom.svg';
-import ArrowTopIcon from './ArrowTop.svg';
-import ArrowLeftIcon from './ArrowLeft.svg';
-import ArrowRightIcon from './ArrowRight.svg';
-export { ArrowBottomIcon, ArrowTopIcon, ArrowLeftIcon, ArrowRightIcon };
+import ArrowBottom from './ArrowBottom.svg';
+import ArrowTop from './ArrowTop.svg';
+import ArrowLeft from './ArrowLeft.svg';
+import ArrowRight from './ArrowRight.svg';
+export { ArrowBottom, ArrowTop, ArrowLeft, ArrowRight };

@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 import _ from 'lodash';
 import {useTheme} from '../../../theme1';
 import styleSheet from './style';
-import {ArrowBottomIcon, ArrowTopIcon} from '../../../library/assets/icons';
+import {ArrowBottom, ArrowTop} from '../../../library/assets/icons';
 
 export interface DropDownListProps {
   title?: string;
@@ -39,9 +39,9 @@ export const DropDownList = ({
         <View style={styles.optionView}>
           <Text>{value}</Text>
           {isOpen ? (
-            <ArrowTopIcon color={theme.colors.gray6} />
+            <ArrowTop color={theme.colors.gray6} />
           ) : (
-            <ArrowBottomIcon color={theme.colors.gray6} />
+            <ArrowBottom color={theme.colors.gray6} />
           )}
         </View>
       </TouchableOpacity>

@@ -8,6 +8,7 @@ export interface TextAreaProps {
   title?: string;
   placeholder?: string;
   placeholderTextColor?: string;
+  numberOfLines?: number;
   onChangeText: (value: string) => void;
 }
 
@@ -15,6 +16,7 @@ export const TextArea = ({
   title = '',
   placeholder = '',
   placeholderTextColor = 'grey',
+  numberOfLines = 10,
   onChangeText,
 }: TextAreaProps) => {
   const theme = useTheme();
@@ -30,7 +32,7 @@ export const TextArea = ({
           style={styles.textArea}
           underlineColorAndroid="transparent"
           placeholderTextColor={placeholderTextColor}
-          numberOfLines={10}
+          numberOfLines={numberOfLines}
           multiline={true}
           onChangeText={(value: any) => {
             onChangeText(value);

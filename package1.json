@@ -11,7 +11,7 @@
     "url": "http://github.com/appasaheb4"
   },
   "scripts": {
-    "build": "rm -rf lib && chmod +x npm-publish.sh && sh ./npm-publish.sh && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json && copyfiles -u 1 src/library/assets/**/* lib/cjs  && copyfiles -u 1 src/library/assets/**/* lib/esm",
+    "build": "rm -rf lib && chmod +x npm-publish.sh && sh ./npm-publish.sh && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json && copyfiles -u 1 src/library/assets/**/* lib/cjs",
     "android": "chmod +x setup.sh && sh ./setup.sh && react-native run-android --port=8082",
     "ios": "react-native run-ios --simulator=`iPhone 14 Pro`",
     "start": "react-native start",

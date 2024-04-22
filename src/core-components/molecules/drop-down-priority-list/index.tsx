@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 import _ from 'lodash';
 import {useTheme} from '../../../theme1';
 import styleSheet from './style';
-import {ArrowBottom, ArrowTop} from '../../../library/assets/icons';
+import {ArrowBottomIcon, ArrowTopIcon} from '../../../library/assets/icons';
 
 export interface DropDownPriorityListProps {
   title?: string;
@@ -53,9 +53,9 @@ export const DropDownPriorityList = ({
           </View>
 
           {isOpen ? (
-            <ArrowTop color={theme.colors.gray6} />
+            <ArrowTopIcon color={theme.colors.gray6} />
           ) : (
-            <ArrowBottom color={theme.colors.gray6} />
+            <ArrowBottomIcon color={theme.colors.gray6} />
           )}
         </View>
       </TouchableOpacity>

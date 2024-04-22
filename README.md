@@ -23,27 +23,27 @@ theme folders check: https://github.com/appasaheb4/react-native-restyle-componen
 
 ## How to use restyle components
 
-import {OtpVerify, Dropdown, StepperGradient} from 'react-native-restyle-components';
+import {DropDownList, StepperGradient} from 'react-native-restyle-components';
 
 ```
-        <OtpVerify
-            onVerify={otp => {
-              console.log({otp});
-            }}
-          />
-        <Dropdown
-            label={'Product Type'}
-            onSelect={item => {
-              console.log({item});
-            }}
-            data={[
-              {label: 'tech abl', value: 'tech abl'},
-              {label: 'github.com/appasaheb4', value: 'github.com/appasaheb4'},
-            ]}
-            displayKey="label"
-            testID="PROD-TYPE"
-            zIndex={1}
-          />
+         <DropDownList
+                title="Task *"
+                data={[
+                  {
+                    title: 'HVAC Repair',
+                  },
+                  {
+                    title: 'AC Repair',
+                  },
+                  {
+                    title: 'Fridge Repair',
+                  },
+                ]}
+                displayKey="title"
+                onChange={(item: any) => {
+                  console.log({item});
+                }}
+              />
         <StepperGradient
             active={1}
             colors={['#0687B4', '#D92CC1']}

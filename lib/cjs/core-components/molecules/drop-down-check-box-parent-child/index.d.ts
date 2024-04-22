@@ -1,7 +1,17 @@
 import React from 'react';
 export interface DropDownCheckBoxParentChildProps {
     title?: string;
-    list: Array<any>;
+    data: Array<any>;
+    testID?: string;
+    mode?: string;
+    maxHeight?: number;
+    minHeight?: number;
+    search?: boolean;
+    dropdownPosition?: string;
+    keyboardAvoiding?: boolean;
+    backgroundColor?: string;
+    containerStyle?: string;
+    accessibilityLabel?: string;
     onChange: (item: string) => void;
 }
-export declare const DropDownCheckBoxParentChild: ({ title, list, onChange, }: DropDownCheckBoxParentChildProps) => React.JSX.Element;
+export declare const DropDownCheckBoxParentChild: React.ForwardRefExoticComponent<DropDownCheckBoxParentChildProps & React.RefAttributes<unknown>>;

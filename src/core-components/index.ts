@@ -7,7 +7,6 @@ export * from './atoms/textArea/text-area-component';
 
 export * from './molecules/otp-verify/otp-verify.component';
 export * from './molecules/stepper/stepper.component';
-export * from './molecules/drop-down/drop-down.component';
 export * from './molecules/drop-down-check-box-parent-child';
 export * from './molecules/drop-down-list';
 export * from './molecules/drop-down-priority-list';

@@ -54,9 +54,12 @@ import {DropDownList, StepperGradient} from 'react-native-restyle-components';
 
 Much more components available in storybook 🙂
 
-### 📚 Like this storybook coming soon for React-Native
+### 📚 Like this check storybook in React-Native
 
-https://appasaheb4.github.io/react-restyle-components
+git clone https://github.com/appasaheb4/react-native-restyle-components
+cd react-native-restyle-components
+yarn install
+yarn android
 
 ### 🌎📧 Contact Details
 

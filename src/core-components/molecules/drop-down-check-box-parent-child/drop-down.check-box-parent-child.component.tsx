@@ -45,7 +45,7 @@ export interface DropDownCheckBoxParentChildProps {
   backgroundColor?: string;
   containerStyle?: string;
   accessibilityLabel?: string;
-  onChange: (item: string) => void;
+  onChange: (item: any, selectedIndex: number) => void;
 }
 
 export const DropDownCheckBoxParentChild = React.forwardRef(
@@ -53,7 +53,6 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
     {
       title = '',
       data = [],
-      testID,
       mode = 'default',
       maxHeight = 340,
       minHeight = 0,
@@ -62,7 +61,6 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
       keyboardAvoiding = true,
       backgroundColor,
       containerStyle,
-      accessibilityLabel,
       onChange,
     }: DropDownCheckBoxParentChildProps,
     currentRef,
@@ -183,15 +181,6 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [keyboardHeight, isOpen, _measure, data]);
 
-    const onSelect = useCallback(
-      (item: any) => {
-        setValue(item);
-        onChange(item);
-        eventClose();
-      },
-      [eventClose, onChange],
-    );
-
     const _renderModal = useCallback(() => {
       if (isOpen && position) {
         const {isFull, width, height, top, bottom, left} = position;
@@ -261,6 +250,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                       <FlatList
                         style={styles.flatListView}
                         data={optionList}
+                        contentContainerStyle={{paddingBottom: 20}}
                         renderItem={({
                           item,
                           index,
@@ -301,7 +291,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                                     };
                                   },
                                 );
-                                onChange(Object.keys(item[0])[0]);
+                                onChange(item[0], 0);
                                 setValue(Object.keys(item[0])[0]);
                                 setOptionList(JSON.parse(JSON.stringify(list)));
                               }}>
@@ -318,6 +308,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                               />
                               <Text style={{marginLeft: 6}}>
                                 {Object.keys(item[0])[0]}
+                                {item?.selected ? 'yes' : 'no'}
                               </Text>
                             </TouchableOpacity>
                             {item[0][Object.keys(item[0])[0]]?.map(
@@ -354,7 +345,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                                         return childOption;
                                       },
                                     );
-                                    onChange(e.title);
+                                    onChange(e, 1);
                                     setValue(e.title);
                                     setOptionList(
                                       JSON.parse(JSON.stringify(list)),
@@ -377,7 +368,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                             )}
                           </View>
                         )}
-                        keyExtractor={(_item, index) => index.toString()}
+                        keyExtractor={(item, index) => index.toString()}
                       />
                     </View>
                   </View>
@@ -391,6 +382,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
       return null;
     }, [
       isOpen,
+      optionList,
       position,
       maxHeight,
       minHeight,

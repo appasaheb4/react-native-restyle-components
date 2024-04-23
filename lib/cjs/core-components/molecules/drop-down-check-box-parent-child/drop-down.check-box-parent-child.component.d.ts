@@ -12,6 +12,6 @@ export interface DropDownCheckBoxParentChildProps {
     backgroundColor?: string;
     containerStyle?: string;
     accessibilityLabel?: string;
-    onChange: (item: string) => void;
+    onChange: (item: any, selectedIndex: number) => void;
 }
 export declare const DropDownCheckBoxParentChild: React.ForwardRefExoticComponent<DropDownCheckBoxParentChildProps & React.RefAttributes<unknown>>;

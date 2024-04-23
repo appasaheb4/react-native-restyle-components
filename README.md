@@ -56,10 +56,12 @@ Much more components available in storybook 🙂
 
 ### 📚 Like this check storybook in React-Native
 
+```
 git clone https://github.com/appasaheb4/react-native-restyle-components
 cd react-native-restyle-components
 yarn install
 yarn android
+```
 
 ### 🌎📧 Contact Details
 

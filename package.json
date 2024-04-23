@@ -48,6 +48,8 @@
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
+    "@react-native-community/datetimepicker": "^7.7.0",
+    "@react-native-community/slider": "^4.5.2",
     "@react-native-community/eslint-config": "^3.2.0",
     "@react-native/metro-config": "^0.75.0-main",
     "@storybook/addon-ondevice-actions": "^7.6.18",

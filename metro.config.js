@@ -12,6 +12,7 @@ const config = {
         inlineRequires: true,
       },
     }),
+    unstable_allowRequireContext: true,
   },
   resolver: {
     assetExts: assetExts.filter(ext => ext !== 'svg'),

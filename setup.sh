@@ -1,1 +1,1 @@
-cp package1.json package.json
+# cp package1.json package.json

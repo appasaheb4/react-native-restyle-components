@@ -58,6 +58,7 @@
     "@storybook/addon-ondevice-actions": "^7.6.18",
     "@storybook/addon-ondevice-controls": "^7.6.18",
     "@storybook/react-native": "^7.6.18",
+    "@storybook/test": "^8.0.9",
     "@tsconfig/react-native": "^2.0.2",
     "@types/jest": "^29.2.1",
     "@types/react": "^18.0.24",

@@ -176,7 +176,6 @@ export const DropDownList = React.forwardRef((props: any, currentRef) => {
   const getValue = useCallback(() => {
     const defaultValue =
       typeof value === 'object' ? _.get(value, valueField) : value;
-
     const getItem = data.filter(e =>
       _.isEqual(defaultValue, _.get(e, valueField)),
     );
@@ -225,14 +224,20 @@ export const DropDownList = React.forwardRef((props: any, currentRef) => {
         onPress={showOrClose}>
         <View style={styles.dropdown}>
           {!_.isEmpty(title) && <Text style={styles.text}>{title}</Text>}
-          <View style={[styles.warperView, styles.optionView]}>
-            <Text>{value}</Text>
-            {visible ? (
-              <ArrowTopIcon color={theme.colors.gray6} />
-            ) : (
-              <ArrowBottomIcon color={theme.colors.gray6} />
-            )}
-          </View>
+          <TouchableOpacity
+            style={styles.warperView}
+            onPress={() => {
+              setVisible(!visible);
+            }}>
+            <View style={styles.optionView}>
+              <Text>{value}</Text>
+              {visible ? (
+                <ArrowTopIcon color={theme.colors.gray6} />
+              ) : (
+                <ArrowBottomIcon color={theme.colors.gray6} />
+              )}
+            </View>
+          </TouchableOpacity>
         </View>
       </TouchableWithoutFeedback>
     );
@@ -245,7 +250,6 @@ export const DropDownList = React.forwardRef((props: any, currentRef) => {
         if (keyboardHeight > 0) {
           return bottom < keyboardHeight + height;
         }
-
         return bottom < (search ? 150 : 100);
       };
       if (width && top && bottom) {
@@ -309,6 +313,7 @@ export const DropDownList = React.forwardRef((props: any, currentRef) => {
                       testID={testID + ' flatlist'}
                       accessibilityLabel={accessibilityLabel + ' flatlist'}
                       keyboardShouldPersistTaps="handled"
+                      contentContainerStyle={{paddingBottom: 20}}
                       style={styles.flatListView}
                       data={optionList}
                       renderItem={({item}: {item: any}) => (

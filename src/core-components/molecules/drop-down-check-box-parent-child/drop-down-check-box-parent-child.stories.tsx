@@ -2,10 +2,6 @@ import {View} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
 import {DropDownCheckBoxParentChild} from './drop-down.check-box-parent-child.component';
 
-const fn = (item?: any) => {
-  console.log({item});
-};
-
 const DropDownCheckBoxParentChildMeta: Meta<
   typeof DropDownCheckBoxParentChild
 > = {
@@ -23,7 +19,7 @@ const DropDownCheckBoxParentChildMeta: Meta<
 export default DropDownCheckBoxParentChildMeta;
 export const Basic: StoryObj<typeof DropDownCheckBoxParentChildMeta> = {
   args: {
-    title: 'Business Unit *',
+    title: 'Business List *',
     data: [
       [
         {

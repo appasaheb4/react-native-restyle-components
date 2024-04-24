@@ -19,10 +19,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "storybook-generate": "sb-rn-get-stories"
   },
-  "files": [
-    "src/",
-    "lib/"
-  ],
+  "files": ["src/", "lib/"],
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.23.1",
     "@shopify/restyle": "^2.4.2",
@@ -42,6 +39,7 @@
     "react-native": "*",
     "react-native-gradle-plugin": "*",
     "react-native-linear-gradient": "*",
+    "react-native-svg": "*",
     "react-native-svg-transformer": "*",
     "react-native-vector-icons": "*",
     "rn-responsive-styles": "*"
@@ -51,8 +49,8 @@
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
     "@react-native-community/datetimepicker": "^7.7.0",
-    "@react-native-community/eslint-config": "^3.2.0",
     "@react-native-community/slider": "^4.5.2",
+    "@react-native-community/eslint-config": "^3.2.0",
     "@react-native/metro-config": "^0.75.0-main",
     "@storybook/addon-ondevice-actions": "^7.6.18",
     "@storybook/addon-ondevice-controls": "^7.6.18",

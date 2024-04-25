@@ -17,7 +17,10 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "storybook-generate": "sb-rn-get-stories"
+    "storybook-generate": "sb-rn-get-stories",
+    "start-storybook-web": "./node_modules/@storybook/react/bin/index.js",
+    "build-storybook-web": "./node_modules/@storybook/react/bin/build.js",
+    "storybook-web": "yarn run start-storybook-web"
   },
   "files": ["src/", "lib/"],
   "dependencies": {
@@ -49,11 +52,13 @@
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
     "@react-native-community/datetimepicker": "^7.7.0",
-    "@react-native-community/slider": "^4.5.2",
     "@react-native-community/eslint-config": "^3.2.0",
+    "@react-native-community/slider": "^4.5.2",
+    "@react-native/babel-preset": "^0.74.81",
     "@react-native/metro-config": "^0.75.0-main",
     "@storybook/addon-ondevice-actions": "^7.6.18",
     "@storybook/addon-ondevice-controls": "^7.6.18",
+    "@storybook/addon-react-native-web": "^0.0.23",
     "@storybook/react-native": "^7.6.18",
     "@storybook/test": "^8.0.9",
     "@tsconfig/react-native": "^2.0.2",
@@ -63,6 +68,7 @@
     "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "^29.2.1",
     "babel-loader": "^8.3.0",
+    "babel-plugin-react-native-web": "^0.19.11",
     "copyfiles": "^2.4.1",
     "eslint": "^8.19.0",
     "jest": "^29.2.1",
@@ -70,6 +76,7 @@
     "prettier": "^2.4.1",
     "react-dom": "18.2.0",
     "react-native-safe-area-context": "^4.9.0",
+    "react-native-web": "^0.19.11",
     "react-test-renderer": "18.2.0",
     "typescript": "4.8.4"
   },

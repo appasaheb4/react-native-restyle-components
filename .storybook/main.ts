@@ -8,8 +8,8 @@ const main: StorybookConfig = {
   addons: [
     '@storybook/addon-ondevice-controls',
     '@storybook/addon-ondevice-actions',
-    '@storybook/addon-react-native-web',
-    '@storybook/addon-essentials',
+    // '@storybook/addon-react-native-web',
+    // '@storybook/addon-essentials',
   ],
 };
 

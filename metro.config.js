@@ -1,5 +1,11 @@
 const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
 
+const {generate} = require('@storybook/react-native/scripts/generate');
+
+generate({
+  configPath: path.resolve(__dirname, './.storybook'),
+});
+
 const defaultConfig = getDefaultConfig(__dirname);
 const {assetExts, sourceExts} = defaultConfig.resolver;
 

@@ -1,5 +1,4 @@
 /// <reference types="react" />
-/// <reference types="react" />
 interface OtpVerifyProps {
     onVerify: (otp: string) => void;
 }

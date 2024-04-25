@@ -16,11 +16,7 @@
     "ios": "react-native run-ios --simulator=`iPhone 14 Pro`",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "storybook-generate": "sb-rn-get-stories",
-    "start-storybook-web": "./node_modules/@storybook/react/bin/index.js",
-    "build-storybook-web": "./node_modules/@storybook/react/bin/build.js",
-    "storybook-web": "yarn run start-storybook-web"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "files": ["src/", "lib/"],
   "dependencies": {
@@ -56,10 +52,12 @@
     "@react-native-community/slider": "^4.5.2",
     "@react-native/babel-preset": "^0.74.81",
     "@react-native/metro-config": "^0.75.0-main",
+    "@storybook/addon-essentials": "^8.0.9",
     "@storybook/addon-ondevice-actions": "^7.6.18",
     "@storybook/addon-ondevice-controls": "^7.6.18",
     "@storybook/addon-react-native-web": "^0.0.23",
     "@storybook/react-native": "^7.6.18",
+    "@storybook/react-native-server": "^7.6.7-alpha.1",
     "@storybook/test": "^8.0.9",
     "@tsconfig/react-native": "^2.0.2",
     "@types/jest": "^29.2.1",

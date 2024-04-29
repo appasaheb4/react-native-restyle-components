@@ -6,9 +6,9 @@ const StorybookUIRoot = view.getStorybookUI({
     getItem: AsyncStorage.getItem,
     setItem: AsyncStorage.setItem,
   },
-  onDeviceUI: false,
-  port: 7008,
-  host: '192.168.1.3',
+  // onDeviceUI: false,
+  // port: 7008,
+  // host: '192.168.1.3',
 });
 
 export default StorybookUIRoot;

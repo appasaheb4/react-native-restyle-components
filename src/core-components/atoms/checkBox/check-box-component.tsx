@@ -6,17 +6,30 @@ import styleSheet from './style';
 
 export interface CheckBoxProps {
   title?: string;
+  value?: string;
   list: Array<any>;
   onChange: (item: any) => void;
 }
 
-export const CheckBox = ({title = '', list = [], onChange}: CheckBoxProps) => {
+export const CheckBox = ({
+  title = '',
+  value = '',
+  list = [],
+  onChange,
+}: CheckBoxProps) => {
   const theme = useTheme();
   const styles = styleSheet(theme);
   const [options, setOptions] = useState<Array<any>>();
 
   useEffect(() => {
-    setOptions(list);
+    setOptions(
+      !_.isEmpty(value)
+        ? list.map(e => {
+            if (e.title == value) return {...e, selected: true};
+            else return {...e, selected: false};
+          })
+        : list,
+    );
   }, [list]);
 
   return (
@@ -36,7 +49,7 @@ export const CheckBox = ({title = '', list = [], onChange}: CheckBoxProps) => {
                 if (e.title == item.title) return {...e, selected: true};
                 else return {...e, selected: false};
               });
-              setOptions(result);
+              setOptions(JSON.parse(JSON.stringify(result)));
               onChange(result.find(item => item.selected));
             }}>
             <View
@@ -50,7 +63,7 @@ export const CheckBox = ({title = '', list = [], onChange}: CheckBoxProps) => {
                 },
               ]}
             />
-            <Text style={{marginLeft: 6}}>{item.title}</Text>
+            <Text style={{marginLeft: 6, color: '#4A4A4A'}}>{item.title}</Text>
           </TouchableOpacity>
         ))}
       </View>

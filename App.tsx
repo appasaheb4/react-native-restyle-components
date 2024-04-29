@@ -84,6 +84,7 @@ function App(): JSX.Element {
             />
             <CheckBox
               title="Services"
+              value=""
               list={[
                 {title: 'Web', selected: true},
                 {title: 'Mobile', selected: false},

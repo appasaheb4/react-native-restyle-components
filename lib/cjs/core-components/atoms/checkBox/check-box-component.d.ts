@@ -1,7 +1,13 @@
 import React from 'react';
 export interface CheckBoxProps {
-    title?: string;
-    list: Array<any>;
-    onChange: (item: any) => void;
+  title?: string;
+  value?: string;
+  list: Array<any>;
+  onChange: (item: any) => void;
 }
-export declare const CheckBox: ({ title, list, onChange }: CheckBoxProps) => React.JSX.Element;
+export declare const CheckBox: ({
+  title,
+  value,
+  list,
+  onChange,
+}: CheckBoxProps) => React.JSX.Element;

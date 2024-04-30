@@ -20,7 +20,7 @@ const config = {
   },
   resolver: {
     assetExts: assetExts.filter(ext => ext !== 'svg'),
-    sourceExts: [...sourceExts, 'svg', 'mjs'],
+    sourceExts: [...sourceExts, 'svg'],
     resolveRequest: (context, moduleName, platform) => {
       const defaultResolveResult = context.resolveRequest(
         context,

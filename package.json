@@ -17,10 +17,12 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "storybook:web": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "storybook": "STORYBOOK_ENABLED=true react-native start",
+    "storybook:ios": "STORYBOOK_ENABLED=true react-native run-ios",
+    "storybook:android": "STORYBOOK_ENABLED=true react-native run-android",
     "storybook-generate": "sb-rn-get-stories --config-path .ondevice",
-    "storybook": "cross-env STORYBOOK_ENABLED='true' react-native start"
+    "storybook:web": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "files": [
     "src/",

@@ -123,7 +123,7 @@
 // export default App;
 let AppEntryPoint: any;
 // AppEntryPoint = App;
-AppEntryPoint = require('./.storybook').default;
+AppEntryPoint = require('./.ondevice').default;
 // if (process.env.STORYBOOK_ENABLED === 'true') {
 //   AppEntryPoint = require('./.storybook').default;
 // }

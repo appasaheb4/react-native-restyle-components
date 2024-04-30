@@ -1,16 +1,18 @@
-import {StorybookConfig} from '@storybook/react-native';
-
-const main: StorybookConfig = {
+module.exports = {
   stories: [
-    // './stories/**/*.stories.?(ts|tsx|js|jsx)'
+    '../src/core-components/**/*.stories.mdx',
     '../src/core-components/**/*.stories.?(ts|tsx|js|jsx)',
   ],
   addons: [
-    '@storybook/addon-ondevice-controls',
-    '@storybook/addon-ondevice-actions',
-    // '@storybook/addon-react-native-web',
-    // '@storybook/addon-essentials',
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-react-native-web',
   ],
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
+  },
+  docs: {
+    autodocs: true,
+  },
 };
-
-export default main;

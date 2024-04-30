@@ -24,7 +24,7 @@ import React, {
 import _ from 'lodash';
 import {useTheme} from '../../../theme1';
 import styleSheet from './style';
-// import {ArrowBottomIcon, ArrowTopIcon} from '../../../library/assets/icons';
+import {ArrowBottomIcon, ArrowTopIcon} from '../../../library/assets/icons';
 
 import {useDetectDevice} from '../../../utils/toolkits';
 import {useDeviceOrientation} from '../../../utils/useDeviceOrientation';
@@ -407,11 +407,11 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
               }}>
               <View style={styles.optionView}>
                 <Text>{value}</Text>
-                {/* {isOpen ? (
+                {isOpen ? (
                   <ArrowTopIcon color={theme.colors.gray6} />
                 ) : (
                   <ArrowBottomIcon color={theme.colors.gray6} />
-                )} */}
+                )}
               </View>
             </TouchableOpacity>
           </View>

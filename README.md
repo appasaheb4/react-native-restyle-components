@@ -21,37 +21,6 @@ theme folders check: https://github.com/appasaheb4/react-native-restyle-componen
 <!-- ## Output
 <img src="https://github.com/appasaheb4/react-native-restyle-components/blob/master/src/library/assets/npmInfo/appScreen.png" width="200"> -->
 
-## How to use restyle components
-
-import {DropDownList, StepperGradient} from 'react-native-restyle-components';
-
-```
-         <DropDownList
-                title="Task *"
-                data={[
-                  {
-                    title: 'HVAC Repair',
-                  },
-                  {
-                    title: 'AC Repair',
-                  },
-                  {
-                    title: 'Fridge Repair',
-                  },
-                ]}
-                displayKey="title"
-                onChange={(item: any) => {
-                  console.log({item});
-                }}
-              />
-        <StepperGradient
-            active={1}
-            colors={['#0687B4', '#D92CC1']}
-            stepperSize={14}
-            content={['Your Cart', 'About You', 'Payment']}
-          />
-```
-
 ### 📚 Storybook
 
 https://appasaheb4.github.io/react-native-restyle-components

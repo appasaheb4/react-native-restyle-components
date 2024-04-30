@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.css';
-declare type User = {
+type User = {
     name: string;
 };
 interface HeaderProps {

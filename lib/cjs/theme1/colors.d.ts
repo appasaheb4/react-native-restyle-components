@@ -64,4 +64,4 @@ export declare const dark: {
     secondaryBlack: string;
     gradient2: string;
 };
-export declare type ColorProps = typeof light;
+export type ColorProps = typeof light;

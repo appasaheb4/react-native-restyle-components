@@ -275,8 +275,8 @@ export declare const theme: {
     };
 };
 export { all as allRestyleFunctions } from '@shopify/restyle';
-export declare type Theme = typeof theme;
-export declare type Color = keyof (typeof theme)['colors'];
-export declare type AllRestylePropsWithoutVariantProps = AllProps<Theme> & VisibleProps<Theme> & PropsWithChildren;
-export declare type RestyleProps<T extends keyof Theme | void = void> = T extends keyof Theme ? AllRestylePropsWithoutVariantProps & VariantProps<Theme, T> : AllRestylePropsWithoutVariantProps;
+export type Theme = typeof theme;
+export type Color = keyof (typeof theme)['colors'];
+export type AllRestylePropsWithoutVariantProps = AllProps<Theme> & VisibleProps<Theme> & PropsWithChildren;
+export type RestyleProps<T extends keyof Theme | void = void> = T extends keyof Theme ? AllRestylePropsWithoutVariantProps & VariantProps<Theme, T> : AllRestylePropsWithoutVariantProps;
 export default theme;

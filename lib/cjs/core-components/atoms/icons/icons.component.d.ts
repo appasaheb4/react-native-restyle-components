@@ -4,6 +4,6 @@ interface IconProps {
     size?: number;
     color?: string;
 }
-export declare const LineAwesomeIconSet: typeof import("react-native-vector-icons/Icon").Icon;
+export declare const LineAwesomeIconSet: any;
 export declare const LineAwesome: ({ icon, size, color }: IconProps) => React.JSX.Element;
 export {};

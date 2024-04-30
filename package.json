@@ -11,7 +11,8 @@
     "url": "http://github.com/appasaheb4"
   },
   "scripts": {
-    "android": "react-native run-android",
+    "build": "rm -rf lib && chmod +x npm-publish.sh && sh ./npm-publish.sh && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json && copyfiles -u 1 src/library/assets/**/* lib/cjs",
+    "android": "chmod +x setup.sh && sh ./setup.sh && react-native run-android --port=8082",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
@@ -21,12 +22,10 @@
     "storybook:android": "STORYBOOK_ENABLED=true react-native run-android",
     "storybook-generate": "sb-rn-get-stories --config-path .ondevice",
     "storybook:web": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
-  "files": [
-    "src/",
-    "lib/"
-  ],
+  "files": ["src/", "lib/"],
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.23.1",
     "@react-native-community/datetimepicker": "^7.6.3",
@@ -73,7 +72,7 @@
     "@storybook/addon-ondevice-controls": "^7.6.17",
     "@storybook/addon-ondevice-notes": "^7.6.17",
     "@storybook/addon-react-native-web": "^0.0.23",
-    "@storybook/react": "^7.6.17",
+    "@storybook/react": "^8.0.9",
     "@storybook/react-native": "^7.6.17",
     "@storybook/react-webpack5": "^7.6.17",
     "@storybook/testing-library": "^0.2.2",
@@ -88,6 +87,7 @@
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "eslint": "^8.57.0",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.1.1",
     "jest": "^29.7.0",
     "prettier": "^3.2.5",
     "react-test-renderer": "^18.2.0",

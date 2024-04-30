@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import type { StyleProp, TextStyle, ViewStyle, TextProps, ImageStyle, FlatListProps } from 'react-native';
-export declare type IDropdownRef = {
+export type IDropdownRef = {
     open: () => void;
     close: () => void;
 };

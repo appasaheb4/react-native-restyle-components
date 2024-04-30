@@ -22,4 +22,4 @@ export declare const measure: {
         XLARGE: number;
     };
 };
-export declare type MEASURE = typeof measure;
+export type MEASURE = typeof measure;

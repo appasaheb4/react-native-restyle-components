@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = {
   webpackFinal: async config => {
     // Replaces the webpack rule that loads SVGs as static files to leave out SVG files for us to handle
@@ -17,6 +18,10 @@ module.exports = {
       test: /.svg$/,
       use: ['@svgr/webpack'],
     });
+    config.resolve.alias['react-native-linear-gradient'] = path.resolve(
+      __dirname,
+      './lib/react-native-web-linear-gradient',
+    );
     return config;
   },
   stories: [

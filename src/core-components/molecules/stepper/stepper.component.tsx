@@ -1,6 +1,5 @@
 import React from 'react';
-import {TextInput} from 'react-native'
-import {Box} from '../..';
+import {View, Text} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 interface StepperGradientProps {
@@ -19,11 +18,13 @@ export const StepperGradient = ({
   stepperSize = 10,
 }: StepperGradientProps) => {
   return (
-    <Box
-      flexDirection="row"
-      alignItems="center"
-      justifyContent="space-between"
-      marginVertical="md">
+    <View
+      style={{
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        marginVertical: 10,
+      }}>
       <LinearGradient
         style={{
           flex: 1,
@@ -40,39 +41,44 @@ export const StepperGradient = ({
         colors={colors}>
         {content.map((item, index) => (
           <>
-            <Box key={index}>
-              <Box
-                backgroundColor={index + 1 === active ? 'white' : 'transparent'}
-                borderColor="white"
-                borderWidth={1}
-                height={stepperSize}
-                width={stepperSize}
-                borderRadius={stepperSize / 2}
-              />
-              {/* <TextInput
+            <View key={index}>
+              <View
                 style={{
-                  fontSize:10,
+                  backgroundColor:
+                    index + 1 === active ? 'white' : 'transparent',
+                  borderColor: 'white',
+                  borderWidth: 1,
+                  height: stepperSize,
+                  width: stepperSize,
+                  borderRadius: stepperSize / 2,
+                }}
+              />
+              <Text
+                style={{
+                  fontSize: 10,
                   position: 'absolute',
                   width: 100,
                   color: 'white',
-                  marginLeft: -20,
-                  marginTop: 12,
+                  marginLeft: -14,
+                  marginTop: 18,
                 }}>
                 {item}
-              </TextInput> */}
-            </Box>
+              </Text>
+            </View>
 
             {content.length !== index + 1 && (
-              <Box
-                flex={1}
-                backgroundColor="white"
-                height={1}
-                borderColor="white"
+              <View
+                style={{
+                  flex: 1,
+                  backgroundColor: 'white',
+                  height: 1,
+                  borderColor: 'white',
+                }}
               />
             )}
           </>
         ))}
       </LinearGradient>
-    </Box>
+    </View>
   );
 };

@@ -1,0 +1,1 @@
+(self.webpackChunkreact_native_restyle_components=self.webpackChunkreact_native_restyle_components||[]).push([[3],{"./src/core-components/atoms/text/text.component.tsx":(__unused_webpack_module,exports)=>{Object.defineProperty(exports,"__esModule",{value:!0})}}]);

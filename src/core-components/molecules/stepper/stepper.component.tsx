@@ -1,5 +1,6 @@
 import React from 'react';
-import {Box, TextRN} from '../..';
+import {TextInput} from 'react-native'
+import {Box} from '../..';
 import LinearGradient from 'react-native-linear-gradient';
 
 interface StepperGradientProps {
@@ -48,10 +49,9 @@ export const StepperGradient = ({
                 width={stepperSize}
                 borderRadius={stepperSize / 2}
               />
-              <TextRN
-                color="white"
-                fontSize={8}
+              {/* <TextInput
                 style={{
+                  fontSize:10,
                   position: 'absolute',
                   width: 100,
                   color: 'white',
@@ -59,7 +59,7 @@ export const StepperGradient = ({
                   marginTop: 12,
                 }}>
                 {item}
-              </TextRN>
+              </TextInput> */}
             </Box>
 
             {content.length !== index + 1 && (

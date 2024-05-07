@@ -1,6 +1,6 @@
 import {View} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
-import {DropDownList} from './index';
+import {DropDownList} from './drop-down-list.component';
 
 const DropDownListMeta: Meta<typeof DropDownList> = {
   title: 'Design System/Molecules/DropDownList',

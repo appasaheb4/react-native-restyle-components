@@ -46,9 +46,8 @@ export const OtpVerify = ({onVerify}: OtpVerifyProps): JSX.Element => {
         style={{
           flexDirection: 'row',
           justifyContent: 'space-between',
-          alignSelf: 'center',
+          alignSelf: 'center',  
           marginVertical: 10,
-          width: Dimensions.get('screen').width - 160,
         }}>
         {inputs?.map((i: number, j: number) => (
           <TextInput
@@ -61,9 +60,8 @@ export const OtpVerify = ({onVerify}: OtpVerifyProps): JSX.Element => {
               textAlign: 'center',
               color: 'white',
               fontSize: 20,
-              textAlignVertical: 'top',
-              paddingTop: Platform.OS === 'ios' ? 0 : 10,
               paddingBottom: 0,
+              marginHorizontal:4
             }}
             keyboardType="numeric"
             onChangeText={v => focusNext(j, v)}

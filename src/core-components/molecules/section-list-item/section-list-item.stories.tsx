@@ -12,6 +12,9 @@ const SectionListItemMeta: Meta<typeof SectionListItem> = {
       </View>
     ),
   ],
+  parameters: {
+    componentSubtitle: `import { SectionListItem } from 'react-native-restyle-components'`,
+  },
 };
 
 export default SectionListItemMeta;

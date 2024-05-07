@@ -7,13 +7,24 @@ const OtpVerifyMeta: Meta<typeof OtpVerify> = {
   component: OtpVerify,
   decorators: [
     Story => (
-      <View style={{flex: 1, width:20, marginLeft:100, alignItems:'center', justifyContent:'center', padding: 10}}>
+      <View
+        style={{
+          flex: 1,
+          width: 20,
+          marginLeft: 100,
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: 10,
+        }}>
         <Story />
       </View>
     ),
   ],
+  parameters: {
+    componentSubtitle: `import { OtpVerify } from 'react-native-restyle-components'`,
+  },
 };
-  
+
 export default OtpVerifyMeta;
 export const Basic: StoryObj<typeof OtpVerifyMeta> = {
   args: {

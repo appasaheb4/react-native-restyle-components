@@ -14,6 +14,9 @@ const DropDownCheckBoxParentChildMeta: Meta<
       </View>
     ),
   ],
+  parameters: {
+    componentSubtitle: `import { DropDownCheckBoxParentChild } from 'react-native-restyle-components'`,
+  },
 };
 
 export default DropDownCheckBoxParentChildMeta;

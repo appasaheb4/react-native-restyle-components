@@ -12,6 +12,9 @@ const DropDownListMeta: Meta<typeof DropDownList> = {
       </View>
     ),
   ],
+  parameters: {
+    componentSubtitle: `import { DropDownList } from 'react-native-restyle-components'`,
+  },
 };
 
 export default DropDownListMeta;

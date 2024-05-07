@@ -7,18 +7,21 @@ const DropDownPriorityListMeta: Meta<typeof DropDownPriorityList> = {
   component: DropDownPriorityList,
   decorators: [
     Story => (
-      <View style={{flex: 1,  padding: 10}}>
+      <View style={{flex: 1, padding: 10}}>
         <Story />
       </View>
     ),
   ],
+  parameters: {
+    componentSubtitle: `import { DropDownPriorityList } from 'react-native-restyle-components'`,
+  },
 };
-  
+
 export default DropDownPriorityListMeta;
 export const Basic: StoryObj<typeof DropDownPriorityListMeta> = {
   args: {
-    title:'Priority',
-    data:[
+    title: 'Priority',
+    data: [
       {
         color: '#5AC47D',
         title: 'Low',
@@ -32,7 +35,7 @@ export const Basic: StoryObj<typeof DropDownPriorityListMeta> = {
         title: 'High',
       },
     ],
-    displayKey:'title',
+    displayKey: 'title',
     onChange: item => {
       console.log({item});
     },

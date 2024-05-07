@@ -2,10 +2,6 @@ import {View} from 'react-native';
 import type {Meta, StoryObj} from '@storybook/react';
 import {StepperGradient} from './stepper.component';
 
-// const code = `
-//   <Button />
-// `;
-
 const StepperGradientMeta: Meta<typeof StepperGradient> = {
   title: 'Design System/Molecules/StepperGradient',
   component: StepperGradient,
@@ -17,11 +13,7 @@ const StepperGradientMeta: Meta<typeof StepperGradient> = {
     ),
   ],
   parameters: {
-    docs: {
-      // source: {
-      //   code,
-      // },
-    },
+    componentSubtitle: `import { StepperGradient } from 'react-native-restyle-components'`,
   },
 };
 

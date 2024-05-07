@@ -45,15 +45,8 @@
     "rn-responsive-styles": "^2.2.0"
   },
   "peerDependencies": {
-    "dayjs": "*",
     "react": "*",
-    "react-native": "*",
-    "react-native-gradle-plugin": "*",
-    "react-native-linear-gradient": "*",
-    "react-native-svg": "*",
-    "react-native-svg-transformer": "*",
-    "react-native-vector-icons": "*",
-    "rn-responsive-styles": "*"
+    "react-native": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.24.4",

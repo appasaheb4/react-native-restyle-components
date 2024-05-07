@@ -10,3 +10,4 @@ export * from './molecules/stepper/stepper.component';
 export * from './molecules/drop-down-check-box-parent-child/drop-down.check-box-parent-child.component';
 export * from './molecules/drop-down-list';
 export * from './molecules/drop-down-priority-list';
+export * from './molecules/sectionListItem';

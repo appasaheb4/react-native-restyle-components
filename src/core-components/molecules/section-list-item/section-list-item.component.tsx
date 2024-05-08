@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   SectionList,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import _ from 'lodash';
 import {useTheme} from '../../../theme1';
 import styleSheet from './styles';
@@ -21,56 +21,14 @@ export const SectionListItem = ({
 }: SectionListItemProps) => {
   const theme = useTheme();
   const styles = styleSheet(theme);
-
-  const [section, setSection] = useState([
-    {
-      title: 'Today, Thursday, May 5',
-      key: 'May 5',
-      data: [
-        {
-          key: 'time',
-          list: [{title: '10:30 AM'}, {title: '11:30 AM'}, {title: '12:30 PM'}],
-        },
-      ],
-    },
-    {
-      title: 'Friday, May 6',
-      key: 'May 6',
-      data: [
-        {
-          key: 'time',
-          list: [
-            {title: '10:30 AM'},
-            {title: '11:30 AM'},
-            {title: '12:30 PM'},
-            {title: '01:30 PM'},
-          ],
-        },
-      ],
-    },
-    {
-      title: 'Saturday, May 7',
-      key: 'May 7',
-      data: [{key: 'time', list: []}],
-    },
-    {
-      title: 'Sunday, May 8',
-      data: [
-        {
-          key: 'time',
-          list: [{title: '10:30 AM'}, {title: '11:30 AM'}, {title: '12:30 PM'}],
-        },
-      ],
-    },
-  ]);
-
+  const [section, setSection] = useState<any>([]);
   useEffect(() => {
-    if (data?.length > 0) setSection(data);
-  }, data);
+    setSection(data);
+  }, [data]);
 
   const renderSection = (sectionItem: any, {list}: {list: any}) => {
     return (
-      <>
+      <View style={{marginBottom: 30}}>
         {list?.length > 0 ? (
           <FlatList
             data={list}
@@ -78,8 +36,9 @@ export const SectionListItem = ({
             columnWrapperStyle={{
               flex: 1,
               justifyContent: 'space-between',
+              paddingBottom: 20,
+              backgroundColor: '#ffffff',
             }}
-            contentContainerStyle={{paddingBottom: 30}}
             renderItem={({item, index}) => (
               <TouchableOpacity
                 style={[
@@ -147,7 +106,7 @@ export const SectionListItem = ({
         ) : (
           <Text style={styles.emptyText}>No Availability</Text>
         )}
-      </>
+      </View>
     );
   };
   return (

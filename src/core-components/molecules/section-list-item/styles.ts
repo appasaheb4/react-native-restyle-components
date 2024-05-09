@@ -11,10 +11,11 @@ export default ({colors}: ThemeProps) => {
       fontWeight: 'bold',
       fontSize: 16,
       color: colors.primaryText,
+      marginVertical: 6,
     },
     listItemWrapper: {
+      marginHorizontal: 6,
       padding: 14,
-      margin: 10,
       borderRadius: 10,
       borderColor: colors.gray8,
       borderWidth: 0.8,
@@ -23,7 +24,6 @@ export default ({colors}: ThemeProps) => {
       height: 10,
       borderBottomColor: colors.gray8,
       borderBottomWidth: 0.4,
-      marginBottom: 20,
     },
     emptyText: {
       marginVertical: 20,

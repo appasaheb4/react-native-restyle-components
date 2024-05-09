@@ -4,6 +4,7 @@ import {
   FlatList,
   TouchableOpacity,
   SectionList,
+  Dimensions,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import _ from 'lodash';
@@ -23,22 +24,40 @@ export const SectionListItem = ({
   const styles = styleSheet(theme);
   const [section, setSection] = useState<any>([]);
   useEffect(() => {
+    console.log({data});
     setSection(data);
   }, [data]);
 
+  const screenWidth =
+    Dimensions.get('window').width - Dimensions.get('window').width / 4;
+  const numColumns = 3;
+  const gap = 10;
+
+  const availableSpace = screenWidth - (numColumns - 1) * gap;
+  const itemSize = availableSpace / numColumns;
+
+  const lastItem = React.useMemo(() => {
+    const last = section[section.length - 1];
+    if (!_.isEmpty(last)) {
+      return last;
+    }
+    return false;
+  }, [section]);
+
   const renderSection = (sectionItem: any, {list}: {list: any}) => {
     return (
-      <View style={{marginBottom: 30}}>
+      <View>
         {list?.length > 0 ? (
           <FlatList
             data={list}
-            numColumns={3}
-            columnWrapperStyle={{
-              flex: 1,
-              justifyContent: 'space-between',
-              paddingBottom: 20,
-              backgroundColor: '#ffffff',
+            numColumns={numColumns}
+            style={{
+              marginBottom: lastItem?.title == sectionItem?.title ? 40 : 0,
             }}
+            contentContainerStyle={{
+              gap,
+            }}
+            columnWrapperStyle={{gap, marginBottom: 10}}
             renderItem={({item, index}) => (
               <TouchableOpacity
                 style={[
@@ -47,6 +66,7 @@ export const SectionListItem = ({
                     backgroundColor: item?.selected
                       ? theme.colors.orange
                       : theme.colors.white,
+                    width: itemSize,
                   },
                 ]}
                 onPress={() => {
@@ -93,7 +113,7 @@ export const SectionListItem = ({
                   onChange(selectedItem[0]);
                   setSection(list);
                 }}>
-                <Text>{item?.title}</Text>
+                <Text style={{textAlign: 'center'}}>{item?.title}</Text>
               </TouchableOpacity>
             )}
             ListFooterComponent={() => (

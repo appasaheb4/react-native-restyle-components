@@ -4,10 +4,11 @@ declare const _default: ({ colors }: ThemeProps) => {
         fontWeight: "bold";
         fontSize: number;
         color: string;
+        marginVertical: number;
     };
     listItemWrapper: {
+        marginHorizontal: number;
         padding: number;
-        margin: number;
         borderRadius: number;
         borderColor: string;
         borderWidth: number;
@@ -16,7 +17,6 @@ declare const _default: ({ colors }: ThemeProps) => {
         height: number;
         borderBottomColor: string;
         borderBottomWidth: number;
-        marginBottom: number;
     };
     emptyText: {
         marginVertical: number;

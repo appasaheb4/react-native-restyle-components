@@ -35,6 +35,7 @@ export interface DropDownPriorityListProps {
   title?: string;
   data: Array<any>;
   displayKey: string;
+  displayValue?: string;
   testID?: string;
   mode?: string;
   maxHeight?: number;
@@ -54,6 +55,7 @@ export const DropDownPriorityList = React.forwardRef(
       title = '',
       data = [],
       displayKey = '',
+      displayValue = 'Select',
       testID,
       mode = 'default',
       maxHeight = 340,
@@ -78,6 +80,12 @@ export const DropDownPriorityList = React.forwardRef(
     const orientation = useDeviceOrientation();
 
     const [keyboardHeight, setKeyboardHeight] = useState<number>(0);
+
+    useEffect(() => {
+      if (displayValue != 'Select')
+        setValue({color: value?.color, title: displayValue});
+      else setValue({color: '', title: displayValue});
+    }, [displayValue]);
 
     useEffect(() => {
       setOptionList(data);
@@ -263,10 +271,17 @@ export const DropDownPriorityList = React.forwardRef(
                         testID={testID + ' flatlist'}
                         accessibilityLabel={accessibilityLabel + ' flatlist'}
                         keyboardShouldPersistTaps="handled"
+                        contentContainerStyle={{paddingBottom: 20}}
                         style={styles.flatListView}
                         data={optionList}
-                        renderItem={({item}: {item: any}) => (
-                          <View>
+                        renderItem={({
+                          item,
+                          index,
+                        }: {
+                          item: any;
+                          index: number;
+                        }) => (
+                          <View key={index?.toString()}>
                             <TouchableOpacity
                               style={{
                                 flexDirection: 'row',
@@ -283,7 +298,7 @@ export const DropDownPriorityList = React.forwardRef(
                                   },
                                 ]}
                               />
-                              <Text style={{marginLeft: 4}}>
+                              <Text style={[styles.text, {marginLeft: 4}]}>
                                 {item[displayKey]}
                               </Text>
                             </TouchableOpacity>
@@ -333,7 +348,7 @@ export const DropDownPriorityList = React.forwardRef(
                     ]}
                   />
                 )}
-                <Text>{value?.title}</Text>
+                <Text style={styles.text}>{value?.title}</Text>
               </View>
               {isOpen ? (
                 <ArrowTopIcon color={theme.colors.gray6} />

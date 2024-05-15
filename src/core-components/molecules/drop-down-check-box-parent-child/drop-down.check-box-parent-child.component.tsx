@@ -34,6 +34,7 @@ const statusBarHeight: number = StatusBar.currentHeight || 0;
 
 export interface DropDownCheckBoxParentChildProps {
   title?: string;
+  displayValue?: string;
   data: Array<any>;
   testID?: string;
   mode?: string;
@@ -52,6 +53,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
   (
     {
       title = '',
+      displayValue = 'Select',
       data = [],
       mode = 'default',
       maxHeight = 340,
@@ -67,7 +69,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
   ) => {
     const theme = useTheme();
     const styles = styleSheet(theme);
-    const [value, setValue] = useState('Select');
+    const [value, setValue] = useState(displayValue);
     const [isOpen, setIsOpen] = useState(false);
     const [optionList, setOptionList] = useState<Array<any>>([]);
 
@@ -79,6 +81,11 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
     useEffect(() => {
       setOptionList(data);
     }, [data]);
+
+    useEffect(() => {
+      if (displayValue == 'Select') setOptionList([]);
+      setValue(displayValue);
+    }, [displayValue]);
 
     const {width: W, height: H} = Dimensions.get('window');
     const styleContainerVertical: ViewStyle = useMemo(() => {
@@ -306,7 +313,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                                   },
                                 ]}
                               />
-                              <Text style={{marginLeft: 6}}>
+                              <Text style={[styles.text, {marginLeft: 6}]}>
                                 {Object.keys(item[0])[0]}
                                 {item?.selected ? 'yes' : 'no'}
                               </Text>
@@ -362,7 +369,9 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                                       },
                                     ]}
                                   />
-                                  <Text style={{marginLeft: 6}}>{e.title}</Text>
+                                  <Text style={[styles.text, {marginLeft: 6}]}>
+                                    {e.title}
+                                  </Text>
                                 </TouchableOpacity>
                               ),
                             )}
@@ -406,7 +415,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                 setIsOpen(!isOpen);
               }}>
               <View style={styles.optionView}>
-                <Text>{value}</Text>
+                <Text style={styles.text}>{value}</Text>
                 {isOpen ? (
                   <ArrowTopIcon color={theme.colors.gray6} />
                 ) : (

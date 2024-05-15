@@ -3,6 +3,7 @@ export interface DropDownPriorityListProps {
     title?: string;
     data: Array<any>;
     displayKey: string;
+    displayValue?: string;
     testID?: string;
     mode?: string;
     maxHeight?: number;

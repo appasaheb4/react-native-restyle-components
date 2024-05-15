@@ -1,6 +1,7 @@
 import React from 'react';
 export interface DropDownCheckBoxParentChildProps {
     title?: string;
+    displayValue?: string;
     data: Array<any>;
     testID?: string;
     mode?: string;

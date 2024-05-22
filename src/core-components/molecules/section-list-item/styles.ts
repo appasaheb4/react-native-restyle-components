@@ -11,7 +11,7 @@ export default ({colors}: ThemeProps) => {
       fontWeight: 'bold',
       fontSize: 16,
       color: colors.primaryText,
-      marginVertical: 6,
+      marginVertical: 10,
     },
     listItemWrapper: {
       marginHorizontal: 6,

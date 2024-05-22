@@ -2,6 +2,7 @@ import React from 'react';
 export interface DropDownCheckBoxParentChildProps {
     title?: string;
     displayValue?: string;
+    disable?: boolean;
     data: Array<any>;
     testID?: string;
     mode?: string;

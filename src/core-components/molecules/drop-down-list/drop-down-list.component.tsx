@@ -251,11 +251,12 @@ export const DropDownList = React.forwardRef(
           testID={testID}
           accessible={!!accessibilityLabel}
           accessibilityLabel={accessibilityLabel}
-          onPress={showOrClose}>
+          onPress={showOrClose}
+          disabled={disable}>
           <View style={styles.dropdown}>
             {!_.isEmpty(title) && <Text style={styles.text}>{title}</Text>}
             <View style={[styles.warperView, styles.optionView]}>
-              <Text style={styles.text}>{value}</Text>
+              <Text>{value}</Text>
               {visible ? (
                 <ArrowTopIcon color={theme.colors.gray6} />
               ) : (

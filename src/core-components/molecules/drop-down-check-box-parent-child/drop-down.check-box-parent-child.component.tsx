@@ -35,6 +35,7 @@ const statusBarHeight: number = StatusBar.currentHeight || 0;
 export interface DropDownCheckBoxParentChildProps {
   title?: string;
   displayValue?: string;
+  disable?: boolean;
   data: Array<any>;
   testID?: string;
   mode?: string;
@@ -54,6 +55,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
     {
       title = '',
       displayValue = 'Select',
+      disable = false,
       data = [],
       mode = 'default',
       maxHeight = 340,
@@ -406,16 +408,17 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
 
     return (
       <View ref={ref} onLayout={_measure}>
-        <TouchableWithoutFeedback onPress={showOrClose}>
+        <TouchableWithoutFeedback onPress={showOrClose} disabled={disable}>
           <View>
             {!_.isEmpty(title) && <Text style={styles.text}>{title}</Text>}
             <TouchableOpacity
+              disabled={disable}
               style={styles.warperView}
               onPress={() => {
                 setIsOpen(!isOpen);
               }}>
               <View style={styles.optionView}>
-                <Text style={styles.text}>{value}</Text>
+                <Text>{value}</Text>
                 {isOpen ? (
                   <ArrowTopIcon color={theme.colors.gray6} />
                 ) : (

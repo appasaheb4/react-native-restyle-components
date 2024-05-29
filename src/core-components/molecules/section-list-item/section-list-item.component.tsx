@@ -28,12 +28,11 @@ export const SectionListItem = ({
     setSection(data);
   }, [data]);
 
-  const screenWidth =
-    Dimensions.get('window').width - Dimensions.get('window').width / 4;
+  const screenWidth = Dimensions.get('window').width;
   const numColumns = 3;
-  const gap = 10;
+  const gap = 14;
 
-  const availableSpace = screenWidth - (numColumns - 1) * gap;
+  const availableSpace = screenWidth - 80;
   const itemSize = availableSpace / numColumns;
 
   const lastItem = React.useMemo(() => {
@@ -43,6 +42,8 @@ export const SectionListItem = ({
     }
     return false;
   }, [section]);
+
+  console.log({section});
 
   const renderSection = (sectionItem: any, {list}: {list: any}) => {
     return (
@@ -67,15 +68,16 @@ export const SectionListItem = ({
                       ? theme.colors.orange
                       : theme.colors.white,
                     width: itemSize,
+                    marginBottom: gap - 8,
                   },
                 ]}
                 onPress={() => {
-                  const list = section.map(o => {
+                  const list = section.map((o: any) => {
                     if (o.title == sectionItem.title) {
                       const info: any = o;
                       info.data[0] = {
                         ...info.data[0],
-                        list: o.data[0]?.list?.map(e => {
+                        list: o.data[0]?.list?.map((e: any) => {
                           if (e.title == item.title)
                             return {...e, selected: true};
                           else return {...e, selected: false};
@@ -95,7 +97,7 @@ export const SectionListItem = ({
                         }),
                       };
                   });
-                  let selectedItem = list.map(item => {
+                  let selectedItem = list.map((item: any) => {
                     if (
                       item.data[0]?.list?.find((inItem: any) => inItem.selected)
                     )
@@ -113,7 +115,19 @@ export const SectionListItem = ({
                   onChange(selectedItem[0]);
                   setSection(list);
                 }}>
-                <Text style={{textAlign: 'center'}}>{item?.title}</Text>
+                <Text
+                  style={{
+                    fontFamily: 'Roboto',
+                    textAlign: 'center',
+                    color: item?.selected
+                      ? theme.colors.white
+                      : theme.colors.primaryText,
+                    fontWeight: item?.selected ? '400' : '500',
+                    fontSize: 18,
+                    height: 22,
+                  }}>
+                  {item?.title}
+                </Text>
               </TouchableOpacity>
             )}
             ListFooterComponent={() => (
@@ -134,8 +148,16 @@ export const SectionListItem = ({
       <SectionList
         sections={section}
         renderItem={({section, item}) => renderSection(section, item)}
-        renderSectionHeader={({section}) => (
-          <Text style={styles.title}>{section.title}</Text>
+        renderSectionHeader={({section: {title}}) => (
+          <Text
+            style={[
+              styles.title,
+              section.findIndex((item: any) => item.title == title) != 0
+                ? {marginVertical: 16}
+                : {marginBottom: 16},
+            ]}>
+            {title}
+          </Text>
         )}
         keyExtractor={item => `time-${item?.key}`}
       />

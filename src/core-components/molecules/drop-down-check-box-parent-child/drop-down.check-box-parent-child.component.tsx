@@ -85,7 +85,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
     }, [data]);
 
     useEffect(() => {
-      if (displayValue == 'Select') setOptionList([]);
+      // if (displayValue == 'Select') setOptionList([]);
       setValue(displayValue);
     }, [displayValue]);
 
@@ -302,22 +302,34 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                                 );
                                 onChange(item[0], 0);
                                 setValue(Object.keys(item[0])[0]);
-                                setOptionList(JSON.parse(JSON.stringify(list)));
+                                // setOptionList(JSON.parse(JSON.stringify(list)));
+                                setIsOpen(!isOpen);
                               }}>
                               <View
                                 style={[
                                   styles.radioCycle,
                                   {
-                                    backgroundColor: item?.selected
-                                      ? theme.colors.primary
-                                      : 'transparent',
+                                    // backgroundColor: item?.selected
+                                    //   ? theme.colors.primary
+                                    //   : 'transparent',
+                                    backgroundColor:
+                                      Object.keys(item[0])[0] == value
+                                        ? theme.colors.primary
+                                        : 'transparent',
                                     borderWidth: item?.selected ? 0 : 1,
                                   },
                                 ]}
                               />
-                              <Text style={[styles.text, {marginLeft: 6}]}>
+                              <Text
+                                style={[
+                                  styles.text,
+                                  {
+                                    marginLeft: 6,
+                                    height: 24,
+                                    textAlign: 'center',
+                                  },
+                                ]}>
                                 {Object.keys(item[0])[0]}
-                                {item?.selected ? 'yes' : 'no'}
                               </Text>
                             </TouchableOpacity>
                             {item[0][Object.keys(item[0])[0]]?.map(
@@ -356,17 +368,22 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                                     );
                                     onChange(e, 1);
                                     setValue(e.title);
-                                    setOptionList(
-                                      JSON.parse(JSON.stringify(list)),
-                                    );
+                                    // setOptionList(
+                                    //   JSON.parse(JSON.stringify(list)),
+                                    // );
+                                    setIsOpen(!isOpen);
                                   }}>
                                   <View
                                     style={[
                                       styles.radioCycle,
                                       {
-                                        backgroundColor: e?.selected
-                                          ? theme.colors.primary
-                                          : 'transparent',
+                                        // backgroundColor: e?.selected
+                                        //   ? theme.colors.primary
+                                        //   : 'transparent',
+                                        backgroundColor:
+                                          e?.title == value
+                                            ? theme.colors.primary
+                                            : 'transparent',
                                         borderWidth: e?.selected ? 0 : 1,
                                       },
                                     ]}

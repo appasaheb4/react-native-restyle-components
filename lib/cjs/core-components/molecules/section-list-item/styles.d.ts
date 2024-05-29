@@ -4,11 +4,11 @@ declare const _default: ({ colors }: ThemeProps) => {
         fontWeight: "bold";
         fontSize: number;
         color: string;
-        marginVertical: number;
+        fontFamily: string;
     };
     listItemWrapper: {
-        marginHorizontal: number;
-        padding: number;
+        textAlign: "center";
+        paddingVertical: number;
         borderRadius: number;
         borderColor: string;
         borderWidth: number;

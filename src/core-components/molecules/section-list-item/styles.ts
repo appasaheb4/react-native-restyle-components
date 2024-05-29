@@ -9,13 +9,13 @@ export default ({colors}: ThemeProps) => {
   return CreateResponsiveStyle({
     title: {
       fontWeight: 'bold',
-      fontSize: 16,
+      fontSize: 18,
       color: colors.primaryText,
-      marginVertical: 10,
+      fontFamily: 'Roboto',
     },
     listItemWrapper: {
-      marginHorizontal: 6,
-      padding: 14,
+      textAlign: 'center',
+      paddingVertical: 14,
       borderRadius: 10,
       borderColor: colors.gray8,
       borderWidth: 0.8,

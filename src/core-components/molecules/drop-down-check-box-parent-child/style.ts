@@ -23,7 +23,6 @@ export default ({colors, typography}: ThemeProps): any => {
     text: {
       fontSize: 14,
       color: colors.gray5,
-      marginBottom: 10,
     },
     warperView: {
       flexDirection: 'row',

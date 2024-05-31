@@ -256,7 +256,7 @@ export const DropDownList = React.forwardRef(
           <View style={styles.dropdown}>
             {!_.isEmpty(title) && <Text style={styles.text}>{title}</Text>}
             <View style={[styles.warperView, styles.optionView]}>
-              <Text>{value}</Text>
+              <Text numberOfLines={1}>{value}</Text>
               {visible ? (
                 <ArrowTopIcon color={theme.colors.gray6} />
               ) : (

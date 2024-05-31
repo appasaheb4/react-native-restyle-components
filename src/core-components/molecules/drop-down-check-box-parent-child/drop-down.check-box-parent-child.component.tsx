@@ -435,7 +435,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                 setIsOpen(!isOpen);
               }}>
               <View style={styles.optionView}>
-                <Text>{value}</Text>
+                <Text numberOfLines={1}>{value}</Text>
                 {isOpen ? (
                   <ArrowTopIcon color={theme.colors.gray6} />
                 ) : (

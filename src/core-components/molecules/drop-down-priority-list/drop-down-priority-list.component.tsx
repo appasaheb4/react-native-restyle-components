@@ -348,7 +348,7 @@ export const DropDownPriorityList = React.forwardRef(
                     ]}
                   />
                 )}
-                <Text>{value?.title}</Text>
+                <Text numberOfLines={1}>{value?.title}</Text>
               </View>
               {isOpen ? (
                 <ArrowTopIcon color={theme.colors.gray6} />

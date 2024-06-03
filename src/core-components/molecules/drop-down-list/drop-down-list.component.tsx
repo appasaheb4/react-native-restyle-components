@@ -253,8 +253,8 @@ export const DropDownList = React.forwardRef(
           accessibilityLabel={accessibilityLabel}
           onPress={showOrClose}
           disabled={disable}>
-          <View style={styles.dropdown}>
-            {!_.isEmpty(title) && <Text style={styles.text}>{title}</Text>}
+          <View>
+            {!_.isEmpty(title) && <Text style={styles.header}>{title}</Text>}
             <View style={[styles.warperView, styles.optionView]}>
               <Text numberOfLines={1}>{value}</Text>
               {visible ? (
@@ -335,36 +335,50 @@ export const DropDownList = React.forwardRef(
                         },
                         containerStyle,
                       ])}>
-                      <FlatList
-                        testID={testID + ' flatlist'}
-                        accessibilityLabel={accessibilityLabel + ' flatlist'}
-                        keyboardShouldPersistTaps="handled"
-                        contentContainerStyle={{paddingBottom: 20}}
-                        style={styles.flatListView}
-                        data={optionList}
-                        renderItem={({
-                          item,
-                          index,
-                        }: {
-                          item: any;
-                          index: number;
-                        }) => (
-                          <View key={index?.toString()}>
-                            <TouchableOpacity
-                              style={{
-                                marginVertical: 8,
-                              }}
-                              onPress={() => {
-                                onSelect(item);
-                              }}>
-                              <Text style={[styles.text, {marginLeft: 2}]}>
-                                {item[displayKey]}
-                              </Text>
-                            </TouchableOpacity>
-                          </View>
-                        )}
-                        keyExtractor={(_item, index) => index.toString()}
-                      />
+                      {optionList?.length > 0 ? (
+                        <FlatList
+                          testID={testID + ' flatlist'}
+                          accessibilityLabel={accessibilityLabel + ' flatlist'}
+                          keyboardShouldPersistTaps="handled"
+                          contentContainerStyle={{paddingBottom: 20}}
+                          style={styles.flatListView}
+                          data={optionList}
+                          renderItem={({
+                            item,
+                            index,
+                          }: {
+                            item: any;
+                            index: number;
+                          }) => (
+                            <View key={index?.toString()}>
+                              <TouchableOpacity
+                                style={{
+                                  marginVertical: 8,
+                                }}
+                                onPress={() => {
+                                  onSelect(item);
+                                }}>
+                                <Text style={[styles.text, {marginLeft: 2}]}>
+                                  {item[displayKey]}
+                                </Text>
+                              </TouchableOpacity>
+                            </View>
+                          )}
+                          keyExtractor={(_item, index) => index.toString()}
+                        />
+                      ) : (
+                        <View>
+                          <Text
+                            style={{
+                              textAlign: 'center',
+                              fontWeight: 'bold',
+                              margin: 40,
+                              color: theme.colors.gray5,
+                            }}>
+                            No results found
+                          </Text>
+                        </View>
+                      )}
                     </View>
                   </View>
                 </View>

@@ -31,7 +31,6 @@ import {useDeviceOrientation} from '../../../utils/useDeviceOrientation';
 
 const {isTablet} = useDetectDevice;
 const statusBarHeight: number = StatusBar.currentHeight || 0;
-
 export interface DropDownCheckBoxParentChildProps {
   title?: string;
   displayValue?: string;
@@ -256,148 +255,158 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                         },
                         containerStyle,
                       ])}>
-                      <FlatList
-                        style={styles.flatListView}
-                        data={optionList}
-                        contentContainerStyle={{paddingBottom: 20}}
-                        renderItem={({
-                          item,
-                          index,
-                        }: {
-                          item: any;
-                          index: number;
-                        }) => (
-                          <View>
-                            <TouchableOpacity
-                              style={{
-                                flexDirection: 'row',
-                                marginVertical: 6,
-                                alignItems: 'center',
-                              }}
-                              onPress={() => {
-                                const list = optionList?.map(
-                                  (opList: any, opIndex: number) => {
-                                    let childOption = opList;
-                                    let isSelected = opList.selected;
-                                    if (opIndex == index)
-                                      isSelected = !opList.selected;
-                                    else isSelected = false;
-                                    const newArr = childOption[0][
-                                      Object.keys(childOption[0])[0]
-                                    ]?.map((ch: any) => {
-                                      return {...ch, selected: false};
-                                    });
-                                    childOption = [
-                                      {
-                                        [Object.keys(childOption[0])[0]]:
-                                          newArr,
+                      {optionList?.length > 0 ? (
+                        <FlatList
+                          style={styles.flatListView}
+                          data={optionList}
+                          contentContainerStyle={{paddingBottom: 20}}
+                          renderItem={({
+                            item,
+                            index,
+                          }: {
+                            item: any;
+                            index: number;
+                          }) => (
+                            <View>
+                              <TouchableOpacity
+                                style={{
+                                  flexDirection: 'row',
+                                  marginVertical: 4,
+                                  alignItems: 'center',
+                                }}
+                                onPress={() => {
+                                  const list = optionList?.map(
+                                    (opList: any, opIndex: number) => {
+                                      let childOption = opList;
+                                      let isSelected = opList.selected;
+                                      if (opIndex == index)
+                                        isSelected = !opList.selected;
+                                      else isSelected = false;
+                                      const newArr = childOption[0][
+                                        Object.keys(childOption[0])[0]
+                                      ]?.map((ch: any) => {
+                                        return {...ch, selected: false};
+                                      });
+                                      childOption = [
+                                        {
+                                          [Object.keys(childOption[0])[0]]:
+                                            newArr,
+                                          selected: isSelected,
+                                        },
+                                      ];
+                                      return {
+                                        ...childOption,
                                         selected: isSelected,
-                                      },
-                                    ];
-                                    return {
-                                      ...childOption,
-                                      selected: isSelected,
-                                    };
-                                  },
-                                );
-                                onChange(item[0], 0);
-                                setValue(Object.keys(item[0])[0]);
-                                // setOptionList(JSON.parse(JSON.stringify(list)));
-                                setIsOpen(!isOpen);
-                              }}>
-                              <View
-                                style={[
-                                  styles.radioCycle,
-                                  {
-                                    // backgroundColor: item?.selected
-                                    //   ? theme.colors.primary
-                                    //   : 'transparent',
-                                    backgroundColor:
-                                      Object.keys(item[0])[0] == value
-                                        ? theme.colors.primary
-                                        : 'transparent',
-                                    borderWidth: item?.selected ? 0 : 1,
-                                  },
-                                ]}
-                              />
-                              <Text
-                                style={[
-                                  styles.text,
-                                  {
-                                    marginLeft: 6,
-                                    height: 24,
-                                    textAlign: 'center',
-                                  },
-                                ]}>
-                                {Object.keys(item[0])[0]}
-                              </Text>
-                            </TouchableOpacity>
-                            {item[0][Object.keys(item[0])[0]]?.map(
-                              (e: any, i: number) => (
-                                <TouchableOpacity
-                                  style={{
-                                    flexDirection: 'row',
-                                    marginVertical: 6,
-                                    alignItems: 'center',
-                                    marginLeft: 30,
-                                  }}
-                                  onPress={() => {
-                                    const list = optionList?.map(
-                                      (opList: any, opIndex: number) => {
-                                        let childOption = opList;
-                                        const newArr = childOption[0][
-                                          Object.keys(childOption[0])[0]
-                                        ]?.map((ch: any, chIndex: number) => {
-                                          if (index == opIndex && chIndex == i)
-                                            return {
-                                              ...ch,
-                                              selected: !ch.selected,
-                                            };
-                                          return {...ch, selected: false};
-                                          return ch;
-                                        });
-                                        childOption = [
-                                          {
-                                            [Object.keys(childOption[0])[0]]:
-                                              newArr,
-                                            selected: false,
-                                          },
-                                        ];
-                                        return childOption;
-                                      },
-                                    );
-                                    onChange(e, 1);
-                                    setValue(e.title);
-                                    // setOptionList(
-                                    //   JSON.parse(JSON.stringify(list)),
-                                    // );
-                                    setIsOpen(!isOpen);
-                                  }}>
-                                  <View
-                                    style={[
-                                      styles.radioCycle,
-                                      {
-                                        // backgroundColor: e?.selected
-                                        //   ? theme.colors.primary
-                                        //   : 'transparent',
-                                        backgroundColor:
-                                          e?.title == value
-                                            ? theme.colors.primary
-                                            : 'transparent',
-                                        borderWidth: e?.selected ? 0 : 1,
-                                      },
-                                    ]}
-                                  />
-                                  <Text style={[styles.text, {marginLeft: 6}]}>
-                                    {e.title}
-                                  </Text>
-                                </TouchableOpacity>
-                              ),
-                            )}
-                          </View>
-                        )}
-                        keyExtractor={(item, index) => index.toString()}
-                      />
+                                      };
+                                    },
+                                  );
+                                  onChange(item[0], 0);
+                                  setValue(Object.keys(item[0])[0]);
+                                  // setOptionList(JSON.parse(JSON.stringify(list)));
+                                  setIsOpen(!isOpen);
+                                }}>
+                                <View
+                                  style={[
+                                    styles.radioCycle,
+                                    {
+                                      backgroundColor:
+                                        Object.keys(item[0])[0] == value
+                                          ? theme.colors.primary
+                                          : 'transparent',
+                                      borderWidth: item?.selected ? 0 : 1,
+                                    },
+                                  ]}
+                                />
+                                <Text
+                                  style={[
+                                    styles.text,
+                                    {
+                                      marginLeft: 6,
+                                      height: 24,
+                                      textAlign: 'center',
+                                    },
+                                  ]}>
+                                  {Object.keys(item[0])[0]}
+                                </Text>
+                              </TouchableOpacity>
+                              {item[0][Object.keys(item[0])[0]]?.map(
+                                (e: any, i: number) => (
+                                  <TouchableOpacity
+                                    style={{
+                                      flexDirection: 'row',
+                                      marginVertical: 6,
+                                      alignItems: 'center',
+                                      marginLeft: 10,
+                                    }}
+                                    onPress={() => {
+                                      const list = optionList?.map(
+                                        (opList: any, opIndex: number) => {
+                                          let childOption = opList;
+                                          const newArr = childOption[0][
+                                            Object.keys(childOption[0])[0]
+                                          ]?.map((ch: any, chIndex: number) => {
+                                            if (
+                                              index == opIndex &&
+                                              chIndex == i
+                                            )
+                                              return {
+                                                ...ch,
+                                                selected: !ch.selected,
+                                              };
+                                            return {...ch, selected: false};
+                                            return ch;
+                                          });
+                                          childOption = [
+                                            {
+                                              [Object.keys(childOption[0])[0]]:
+                                                newArr,
+                                              selected: false,
+                                            },
+                                          ];
+                                          return childOption;
+                                        },
+                                      );
+                                      onChange(e, 1);
+                                      setValue(e.title);
+                                      setIsOpen(!isOpen);
+                                    }}>
+                                    <View
+                                      style={[
+                                        styles.radioCycle,
+                                        {
+                                          backgroundColor:
+                                            e?.title == value
+                                              ? theme.colors.primary
+                                              : 'transparent',
+                                          borderWidth: e?.selected ? 0 : 1,
+                                        },
+                                      ]}
+                                    />
+                                    <Text
+                                      style={[styles.text, {marginLeft: 6}]}>
+                                      {e.title}
+                                    </Text>
+                                  </TouchableOpacity>
+                                ),
+                              )}
+                            </View>
+                          )}
+                          keyExtractor={(item, index) => index.toString()}
+                        />
+                      ) : (
+                        <View>
+                          <Text
+                            style={{
+                              textAlign: 'center',
+                              fontWeight: 'bold',
+                              margin: 40,
+                              color: theme.colors.gray5,
+                            }}>
+                            {' '}
+                            No results found
+                          </Text>
+                        </View>
+                      )}
                     </View>
                   </View>
                 </View>
@@ -427,7 +436,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
       <View ref={ref} onLayout={_measure}>
         <TouchableWithoutFeedback onPress={showOrClose} disabled={disable}>
           <View>
-            {!_.isEmpty(title) && <Text style={styles.text}>{title}</Text>}
+            {!_.isEmpty(title) && <Text style={styles.header}>{title}</Text>}
             <TouchableOpacity
               disabled={disable}
               style={styles.warperView}

@@ -20,9 +20,14 @@ export default ({colors, typography}: ThemeProps): any => {
       shadowRadius: 1.41,
       elevation: 2,
     },
+    header: {
+      fontSize: 14,
+      color: colors.gray6,
+      marginBottom: 10,
+    },
     text: {
       fontSize: 14,
-      color: colors.gray5,
+      color: colors.gray6,
     },
     warperView: {
       flexDirection: 'row',
@@ -72,7 +77,7 @@ export default ({colors, typography}: ThemeProps): any => {
       shadowOpacity: 0.26,
       shadowRadius: 3,
       elevation: 10,
-      padding: 20,
+      padding: 8,
     },
   };
 };

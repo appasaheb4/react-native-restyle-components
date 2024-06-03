@@ -267,45 +267,59 @@ export const DropDownPriorityList = React.forwardRef(
                         },
                         containerStyle,
                       ])}>
-                      <FlatList
-                        testID={testID + ' flatlist'}
-                        accessibilityLabel={accessibilityLabel + ' flatlist'}
-                        keyboardShouldPersistTaps="handled"
-                        contentContainerStyle={{paddingBottom: 20}}
-                        style={styles.flatListView}
-                        data={optionList}
-                        renderItem={({
-                          item,
-                          index,
-                        }: {
-                          item: any;
-                          index: number;
-                        }) => (
-                          <View key={index?.toString()}>
-                            <TouchableOpacity
-                              style={{
-                                flexDirection: 'row',
-                                marginVertical: 8,
-                              }}
-                              onPress={() => {
-                                onSelect(item);
-                              }}>
-                              <View
-                                style={[
-                                  styles.square,
-                                  {
-                                    backgroundColor: item.color,
-                                  },
-                                ]}
-                              />
-                              <Text style={[styles.text, {marginLeft: 4}]}>
-                                {item[displayKey]}
-                              </Text>
-                            </TouchableOpacity>
-                          </View>
-                        )}
-                        keyExtractor={(_item, index) => index.toString()}
-                      />
+                      {optionList?.length > 0 ? (
+                        <FlatList
+                          testID={testID + ' flatlist'}
+                          accessibilityLabel={accessibilityLabel + ' flatlist'}
+                          keyboardShouldPersistTaps="handled"
+                          contentContainerStyle={{paddingBottom: 20}}
+                          style={styles.flatListView}
+                          data={optionList}
+                          renderItem={({
+                            item,
+                            index,
+                          }: {
+                            item: any;
+                            index: number;
+                          }) => (
+                            <View key={index?.toString()}>
+                              <TouchableOpacity
+                                style={{
+                                  flexDirection: 'row',
+                                  marginVertical: 8,
+                                }}
+                                onPress={() => {
+                                  onSelect(item);
+                                }}>
+                                <View
+                                  style={[
+                                    styles.square,
+                                    {
+                                      backgroundColor: item.color,
+                                    },
+                                  ]}
+                                />
+                                <Text style={[styles.text, {marginLeft: 4}]}>
+                                  {item[displayKey]}
+                                </Text>
+                              </TouchableOpacity>
+                            </View>
+                          )}
+                          keyExtractor={(_item, index) => index.toString()}
+                        />
+                      ) : (
+                        <View>
+                          <Text
+                            style={{
+                              textAlign: 'center',
+                              fontWeight: 'bold',
+                              margin: 40,
+                              color: theme.colors.gray5,
+                            }}>
+                            No results found
+                          </Text>
+                        </View>
+                      )}
                     </View>
                   </View>
                 </View>
@@ -334,7 +348,7 @@ export const DropDownPriorityList = React.forwardRef(
       <View ref={ref} onLayout={_measure}>
         <TouchableWithoutFeedback onPress={showOrClose}>
           <View>
-            {!_.isEmpty(title) && <Text style={styles.text}>{title}</Text>}
+            {!_.isEmpty(title) && <Text style={styles.header}>{title}</Text>}
             <View style={[styles.warperView, styles.optionView]}>
               <View style={{flexDirection: 'row'}}>
                 {!_.isEmpty(value.color) && (

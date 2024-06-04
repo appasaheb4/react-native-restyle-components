@@ -28,9 +28,9 @@ export const Basic: StoryObj<typeof SectionListItemMeta> = {
           {
             key: 'time',
             list: [
-              {title: '10:30 AM'},
-              {title: '11:30 AM'},
-              {title: '12:30 PM'},
+              {title: '10:30', period: 'AM'},
+              {title: '11:30', period: 'AM'},
+              {title: '12:30', period: 'AM'},
             ],
           },
         ],
@@ -42,10 +42,10 @@ export const Basic: StoryObj<typeof SectionListItemMeta> = {
           {
             key: 'time',
             list: [
-              {title: '10:30 AM'},
-              {title: '11:30 AM'},
-              {title: '12:30 PM'},
-              {title: '01:30 PM'},
+              {title: '10:30', period: 'AM'},
+              {title: '11:30', period: 'AM'},
+              {title: '12:30', period: 'AM'},
+              {title: '01:30', period: 'AM'},
             ],
           },
         ],
@@ -61,9 +61,9 @@ export const Basic: StoryObj<typeof SectionListItemMeta> = {
           {
             key: 'time',
             list: [
-              {title: '10:30 AM'},
-              {title: '11:30 AM'},
-              {title: '12:30 PM'},
+              {title: '10:30', period: 'AM'},
+              {title: '11:30', period: 'AM'},
+              {title: '12:30', period: 'AM'},
             ],
           },
         ],

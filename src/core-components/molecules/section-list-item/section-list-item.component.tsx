@@ -127,6 +127,19 @@ export const SectionListItem = ({
                     height: 22,
                   }}>
                   {item?.title}
+                  <Text
+                    style={{
+                      fontFamily: 'Roboto',
+                      textAlign: 'center',
+                      color: item?.selected
+                        ? theme.colors.white
+                        : theme.colors.primaryText,
+                      fontWeight: '400',
+                      fontSize: 16,
+                      height: 22,
+                    }}>
+                    {' ' + item?.period}
+                  </Text>
                 </Text>
               </TouchableOpacity>
             )}

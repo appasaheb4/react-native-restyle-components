@@ -36,8 +36,8 @@ export const Basic: StoryObj<typeof DropDownCheckBoxParentChildMeta> = {
       [
         {
           'Parent Category 2': [
-            {title: 'Sub-Category 1', selected: false},
-            {title: 'Sub-Category 2', selected: false},
+            {title: 'Sub-Category 3', selected: false},
+            {title: 'Sub-Category 4', selected: false},
           ],
           selected: false,
         },
@@ -45,8 +45,8 @@ export const Basic: StoryObj<typeof DropDownCheckBoxParentChildMeta> = {
       [
         {
           'Parent Category 3': [
-            {title: 'Sub-Category 1', selected: false},
-            {title: 'Sub-Category 2', selected: false},
+            {title: 'Sub-Category 5', selected: false},
+            {title: 'Sub-Category 6', selected: false},
           ],
           selected: false,
         },

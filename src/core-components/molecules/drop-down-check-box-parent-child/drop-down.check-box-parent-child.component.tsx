@@ -322,8 +322,6 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                                     styles.text,
                                     {
                                       marginLeft: 6,
-                                      height: 24,
-                                      textAlign: 'center',
                                     },
                                   ]}>
                                   {Object.keys(item[0])[0]}
@@ -336,7 +334,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                                       flexDirection: 'row',
                                       marginVertical: 6,
                                       alignItems: 'center',
-                                      marginLeft: 10,
+                                      marginLeft: 20,
                                     }}
                                     onPress={() => {
                                       const list = optionList?.map(

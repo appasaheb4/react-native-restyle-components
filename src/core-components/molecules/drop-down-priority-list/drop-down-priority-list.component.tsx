@@ -41,6 +41,7 @@ export interface DropDownPriorityListProps {
   maxHeight?: number;
   minHeight?: number;
   search?: boolean;
+  disable?: boolean;
   dropdownPosition?: string;
   keyboardAvoiding?: boolean;
   backgroundColor?: string;
@@ -61,6 +62,7 @@ export const DropDownPriorityList = React.forwardRef(
       maxHeight = 340,
       minHeight = 0,
       search = false,
+      disable = false,
       dropdownPosition = 'auto',
       keyboardAvoiding = true,
       backgroundColor,
@@ -349,7 +351,12 @@ export const DropDownPriorityList = React.forwardRef(
         <TouchableWithoutFeedback onPress={showOrClose}>
           <View>
             {!_.isEmpty(title) && <Text style={styles.header}>{title}</Text>}
-            <View style={[styles.warperView, styles.optionView]}>
+            <View
+              style={[
+                styles.warperView,
+                styles.optionView,
+                disable && {backgroundColor: theme.colors.gray1},
+              ]}>
               <View style={{flexDirection: 'row'}}>
                 {!_.isEmpty(value.color) && (
                   <View
@@ -362,7 +369,11 @@ export const DropDownPriorityList = React.forwardRef(
                     ]}
                   />
                 )}
-                <Text numberOfLines={1}>{value?.title}</Text>
+                <Text numberOfLines={1} style={{color: theme.colors.gray6}}>
+                  {value?.title?.length < 40
+                    ? `${value?.title}`
+                    : `${value?.title?.substring(0, 40)}...`}
+                </Text>
               </View>
               {isOpen ? (
                 <ArrowTopIcon color={theme.colors.gray6} />

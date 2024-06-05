@@ -437,12 +437,17 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
             {!_.isEmpty(title) && <Text style={styles.header}>{title}</Text>}
             <TouchableOpacity
               disabled={disable}
-              style={styles.warperView}
+              style={[
+                styles.warperView,
+                disable && {backgroundColor: theme.colors.gray1},
+              ]}
               onPress={() => {
                 setIsOpen(!isOpen);
               }}>
               <View style={styles.optionView}>
-                <Text numberOfLines={1}>{value}</Text>
+                <Text numberOfLines={1} style={{color: theme.colors.gray6}}>
+                  {value}
+                </Text>
                 {isOpen ? (
                   <ArrowTopIcon color={theme.colors.gray6} />
                 ) : (

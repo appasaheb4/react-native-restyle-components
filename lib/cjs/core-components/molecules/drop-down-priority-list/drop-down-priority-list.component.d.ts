@@ -9,6 +9,7 @@ export interface DropDownPriorityListProps {
     maxHeight?: number;
     minHeight?: number;
     search?: boolean;
+    disable?: boolean;
     dropdownPosition?: string;
     keyboardAvoiding?: boolean;
     backgroundColor?: string;

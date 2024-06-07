@@ -69,6 +69,7 @@ export const Basic: StoryObj<typeof SectionListItemMeta> = {
         ],
       },
     ],
+    isStickySectionHeadersEnabled: true,
     onChange: item => {
       console.log({item});
     },

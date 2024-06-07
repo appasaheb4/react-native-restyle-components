@@ -1,6 +1,6 @@
 {
   "name": "react-native-restyle-components",
-  "version": "1.2.37",
+  "version": "1.2.39",
   "private": false,
   "description": "Easy use restyle components",
   "main": "lib/cjs/core-components/index.js",
@@ -25,7 +25,10 @@
     "build-storybook": "storybook build",
     "deploy-storybook": "gh-pages -d storybook-static"
   },
-  "files": ["src/", "lib/"],
+  "files": [
+    "src/",
+    "lib/"
+  ],
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.23.1",
     "@react-native-community/datetimepicker": "^7.6.3",

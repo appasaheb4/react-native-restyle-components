@@ -14,11 +14,13 @@ import styleSheet from './styles';
 
 export interface SectionListItemProps {
   data: Array<any>;
+  isStickySectionHeadersEnabled?: boolean;
   onChange: (item: any) => void;
 }
 
 export const SectionListItem = ({
   data = [],
+  isStickySectionHeadersEnabled = true,
   onChange,
 }: SectionListItemProps) => {
   const theme = useTheme();
@@ -120,7 +122,12 @@ export const SectionListItem = ({
                     color: item?.selected
                       ? theme.colors.white
                       : theme.colors.primaryText,
-                    fontWeight: item?.selected ? '200' : '500',
+                    fontWeight:
+                      Platform.OS == 'ios'
+                        ? '200'
+                        : item?.selected
+                          ? '400'
+                          : '500',
                     fontSize: 18,
                     height: 22,
                   }}>
@@ -170,6 +177,7 @@ export const SectionListItem = ({
             {title}
           </Text>
         )}
+        stickySectionHeadersEnabled={isStickySectionHeadersEnabled}
         keyExtractor={item => `time-${item?.key}`}
       />
     </View>

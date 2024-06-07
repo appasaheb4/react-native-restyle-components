@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   SectionList,
   Dimensions,
+  Platform,
 } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import _ from 'lodash';
@@ -42,9 +43,6 @@ export const SectionListItem = ({
     }
     return false;
   }, [section]);
-
-  console.log({section});
-
   const renderSection = (sectionItem: any, {list}: {list: any}) => {
     return (
       <View>
@@ -122,7 +120,7 @@ export const SectionListItem = ({
                     color: item?.selected
                       ? theme.colors.white
                       : theme.colors.primaryText,
-                    fontWeight: item?.selected ? '400' : '500',
+                    fontWeight: item?.selected ? '200' : '500',
                     fontSize: 18,
                     height: 22,
                   }}>
@@ -134,7 +132,7 @@ export const SectionListItem = ({
                       color: item?.selected
                         ? theme.colors.white
                         : theme.colors.primaryText,
-                      fontWeight: '400',
+                      fontWeight: Platform.OS == 'ios' ? '200' : '400',
                       fontSize: 16,
                       height: 22,
                     }}>

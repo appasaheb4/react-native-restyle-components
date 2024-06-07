@@ -3,12 +3,13 @@ import {
   DEVICE_SIZES,
   minSize,
 } from 'rn-responsive-styles';
+import {Platform} from 'react-native';
 import {ThemeProps} from '../../../theme1';
 
 export default ({colors}: ThemeProps) => {
   return CreateResponsiveStyle({
     title: {
-      fontWeight: 'bold',
+      fontWeight: Platform.OS == 'ios' ? '200' : '500',
       fontSize: 18,
       color: colors.primaryText,
       fontFamily: 'Roboto',

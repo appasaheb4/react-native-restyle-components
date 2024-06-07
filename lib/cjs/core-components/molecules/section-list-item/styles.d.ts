@@ -1,7 +1,7 @@
 import { ThemeProps } from '../../../theme1';
 declare const _default: ({ colors }: ThemeProps) => {
     title: {
-        fontWeight: "bold";
+        fontWeight: "200" | "500";
         fontSize: number;
         color: string;
         fontFamily: string;

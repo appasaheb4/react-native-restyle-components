@@ -122,7 +122,7 @@ export const SectionListItem = ({
                     color: item?.selected
                       ? theme.colors.white
                       : theme.colors.primaryText,
-                    fontWeight: item?.selected ? '400' : '500',
+                    fontWeight: item?.selected ? '500' : '200',
                     fontSize: 18,
                     height: 22,
                   }}>
@@ -134,7 +134,7 @@ export const SectionListItem = ({
                       color: item?.selected
                         ? theme.colors.white
                         : theme.colors.primaryText,
-                      fontWeight: item?.selected ? '400' : '500',
+                      fontWeight: item?.selected ? '500' : '200',
                       fontSize: 16,
                       height: 22,
                     }}>
@@ -145,7 +145,9 @@ export const SectionListItem = ({
             )}
             ListFooterComponent={() => (
               <>
-                <View style={styles.bottomSeparateView} />
+                {lastItem?.title == sectionItem?.title ? null : (
+                  <View style={styles.bottomSeparateView} />
+                )}
               </>
             )}
             keyExtractor={item => `basicListEntry-${item}`}

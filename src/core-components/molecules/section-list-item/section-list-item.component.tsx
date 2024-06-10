@@ -122,12 +122,7 @@ export const SectionListItem = ({
                     color: item?.selected
                       ? theme.colors.white
                       : theme.colors.primaryText,
-                    fontWeight:
-                      Platform.OS == 'ios'
-                        ? '200'
-                        : item?.selected
-                          ? '400'
-                          : '500',
+                    fontWeight: item?.selected ? '400' : '500',
                     fontSize: 18,
                     height: 22,
                   }}>
@@ -139,7 +134,7 @@ export const SectionListItem = ({
                       color: item?.selected
                         ? theme.colors.white
                         : theme.colors.primaryText,
-                      fontWeight: Platform.OS == 'ios' ? '200' : '400',
+                      fontWeight: item?.selected ? '400' : '500',
                       fontSize: 16,
                       height: 22,
                     }}>

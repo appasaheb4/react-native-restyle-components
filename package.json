@@ -3,15 +3,18 @@
   "version": "1.2.40",
   "private": false,
   "description": "Easy use restyle components",
-  "main": "lib/cjs/core-components/index.js",
-  "types": "lib/cjs/core-components/index.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "files": [
+    "/lib"
+  ],
   "author": {
     "email": "onlyappasaheb4@gmail.com",
     "name": "Lakade Appasaheb",
     "url": "http://github.com/appasaheb4"
   },
   "scripts": {
-    "build": "rm -rf lib && chmod +x npm-publish.sh && sh ./npm-publish.sh && tsc -p tsconfig.json  & tsc -p tsconfig-cjs.json && copyfiles -u 1 src/library/assets/**/* lib/cjs && cp package.json lib/package.json",
+    "build": "rm -rf ./lib && tsc && chmod +x npm-publish.sh && sh ./npm-publish.sh",
     "android": "chmod +x setup.sh && sh ./setup.sh && react-native run-android --port=8082",
     "ios": "react-native run-ios",
     "start": "react-native start",
@@ -25,10 +28,6 @@
     "build-storybook": "storybook build",
     "deploy-storybook": "gh-pages -d storybook-static"
   },
-  "files": [
-    "src/",
-    "lib/"
-  ],
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.23.1",
     "@react-native-community/datetimepicker": "^7.6.3",

@@ -1,33 +1,29 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "lib": ["ES2015"],
-    "target": "ES2015",
-    "module": "ES2020",
-    "strict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "outDir": "./lib/esm",
-    "declaration": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "moduleResolution": "Node",
-    "sourceMap": true,
+    "target": "esnext",
+    "module": "ESNext",
+    "lib": ["ESNext"],
+    "allowJs": true,
     "jsx": "react-native",
-    "noImplicitAny": false,
+    "declaration": true,
+    "outDir": "./lib",
+    "rootDir": "./",
+    "isolatedModules": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
-    "baseUrl": "./",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "noImplicitAny": false
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*",
-    "type/declarations.d.ts"
-  ],
-  "exclude": ["lib"],
-  "typeRoots": ["../node_modules/@types/index.d.ts"]
+  "include": ["src", "index.ts", "type/declarations.d.ts"],
+  "exclude": [
+    "**/__tests__/*",
+    "**/__helpers__/*",
+    "node_modules",
+    "babel.config.js",
+    "jest.config.js",
+    "jest.setup.js",
+    ".eslintrc.js"
+  ]
 }

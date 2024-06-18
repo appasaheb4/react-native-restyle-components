@@ -24,7 +24,12 @@ import React, {
 import _ from 'lodash';
 import {useTheme} from '../../../theme1';
 import styleSheet from './style';
-import {ArrowBottomIcon, ArrowTopIcon} from '../../../library/assets/icons';
+import {
+  ArrowBottomIcon,
+  ArrowTopIcon,
+  ArrowTopGray4,
+  ArrowBottomGray4,
+} from '../../../library/assets/icons';
 
 import {useDetectDevice} from '../../../utils/toolkits';
 import {useDeviceOrientation} from '../../../utils/useDeviceOrientation';
@@ -84,7 +89,6 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
     }, [data]);
 
     useEffect(() => {
-      // if (displayValue == 'Select') setOptionList([]);
       setValue(displayValue);
     }, [displayValue]);
 
@@ -445,13 +449,27 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                 setIsOpen(!isOpen);
               }}>
               <View style={styles.optionView}>
-                <Text numberOfLines={1} style={{color: theme.colors.gray6}}>
+                <Text
+                  numberOfLines={1}
+                  style={{
+                    color: disable
+                      ? theme.colors.gray4
+                      : value == 'Select'
+                        ? theme.colors.gray5
+                        : theme.colors.gray6,
+                  }}>
                   {value}
                 </Text>
                 {isOpen ? (
-                  <ArrowTopIcon color={theme.colors.gray6} />
+                  disable ? (
+                    <ArrowTopGray4 />
+                  ) : (
+                    <ArrowTopIcon />
+                  )
+                ) : disable ? (
+                  <ArrowBottomGray4 />
                 ) : (
-                  <ArrowBottomIcon color={theme.colors.gray6} />
+                  <ArrowBottomIcon />
                 )}
               </View>
             </TouchableOpacity>

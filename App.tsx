@@ -3,7 +3,6 @@ import {SafeAreaView, ScrollView, StatusBar, View} from 'react-native';
 import {ThemeProvider} from '@shopify/restyle';
 import {theme} from './src/theme';
 import {useTheme} from './src/theme1';
-//import {OtpVerify, Dropdown, StepperGradient} from 'react-native-restyle-components'; // use like this
 import {
   DropDownList,
   OtpVerify,
@@ -11,7 +10,7 @@ import {
   Button,
   CheckBox,
   DropDownCheckBoxParentChild,
-} from './lib/cjs/core-components';
+} from './lib';
 
 function App(): JSX.Element {
   const theme1 = useTheme();

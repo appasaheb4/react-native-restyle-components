@@ -11,3 +11,4 @@ export * from './molecules/drop-down-check-box-parent-child/drop-down.check-box-
 export * from './molecules/drop-down-list/drop-down-list.component';
 export * from './molecules/drop-down-priority-list/drop-down-priority-list.component';
 export * from './molecules/section-list-item/section-list-item.component';
+export * from './molecules/search-drop-down-list/search-drop-down-list.component';

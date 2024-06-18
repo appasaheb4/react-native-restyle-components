@@ -26,7 +26,12 @@ import {useDetectDevice} from '../../../utils/toolkits';
 import {useDeviceOrientation} from '../../../utils/useDeviceOrientation';
 import {useTheme} from '../../../theme1';
 import styleSheet from './styles';
-import {ArrowBottomIcon, ArrowTopIcon} from '../../../library/assets/icons';
+import {
+  ArrowBottomIcon,
+  ArrowTopIcon,
+  ArrowTopGray4,
+  ArrowBottomGray4,
+} from '../../../library/assets/icons';
 
 const {isTablet} = useDetectDevice;
 const statusBarHeight: number = StatusBar.currentHeight || 0;
@@ -261,15 +266,29 @@ export const DropDownList = React.forwardRef(
                 styles.optionView,
                 disable && {backgroundColor: theme.colors.gray1},
               ]}>
-              <Text numberOfLines={1} style={{color: theme.colors.gray6}}>
-                {value?.length < 46
+              <Text
+                numberOfLines={1}
+                style={{
+                  color: disable
+                    ? theme.colors.gray4
+                    : value == 'Select'
+                      ? theme.colors.gray5
+                      : theme.colors.gray6,
+                }}>
+                {value?.length < 40
                   ? `${value}`
-                  : `${value?.substring(0, 46)}...`}
+                  : `${value?.substring(0, 40)}...`}
               </Text>
               {visible ? (
-                <ArrowTopIcon color={theme.colors.gray6} />
+                disable ? (
+                  <ArrowTopGray4 />
+                ) : (
+                  <ArrowTopIcon />
+                )
+              ) : disable ? (
+                <ArrowBottomGray4 />
               ) : (
-                <ArrowBottomIcon color={theme.colors.gray6} />
+                <ArrowBottomIcon />
               )}
             </View>
           </View>

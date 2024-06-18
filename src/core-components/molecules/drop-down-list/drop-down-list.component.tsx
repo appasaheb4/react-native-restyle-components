@@ -274,10 +274,11 @@ export const DropDownList = React.forwardRef(
                     : value == 'Select'
                       ? theme.colors.gray5
                       : theme.colors.gray6,
+                  marginLeft: 8,
                 }}>
-                {value?.length < 40
+                {value?.length < 44
                   ? `${value}`
-                  : `${value?.substring(0, 40)}...`}
+                  : `${value?.substring(0, 44)}...`}
               </Text>
               {visible ? (
                 disable ? (

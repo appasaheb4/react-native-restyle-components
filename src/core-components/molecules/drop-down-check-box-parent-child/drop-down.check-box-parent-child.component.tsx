@@ -457,6 +457,7 @@ export const DropDownCheckBoxParentChild = React.forwardRef(
                       : value == 'Select'
                         ? theme.colors.gray5
                         : theme.colors.gray6,
+                    marginLeft: 8,
                   }}>
                   {value}
                 </Text>

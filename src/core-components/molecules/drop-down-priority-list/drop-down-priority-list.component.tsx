@@ -382,6 +382,7 @@ export const DropDownPriorityList = React.forwardRef(
                       : value?.title == 'Select'
                         ? theme.colors.gray5
                         : theme.colors.gray6,
+                    marginLeft: 8,
                   }}>
                   {value?.title?.length < 40
                     ? `${value?.title}`

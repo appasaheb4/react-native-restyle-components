@@ -1,10 +1,6 @@
 {
   "name": "react-native-restyle-components",
-<<<<<<< Updated upstream
   "version": "1.2.44",
-=======
-  "version": "1.2.43",
->>>>>>> Stashed changes
   "private": false,
   "description": "Easy use restyle components",
   "main": "./lib/index.js",
